@@ -93,6 +93,9 @@ body {
 	font-size: 30px;
 	color: #2b2b2b;
 }
+#mainNav li.nav-icon a:hover {
+	text-decoration: none;
+}
 #mainNav li.nav-icon .fa-facebook-square {
 	color: #1877f2;
 }
@@ -112,6 +115,13 @@ body {
 }
 #mainNav li.nav-icon .fa-linkedin:hover {
 	color: #006b9c;
+	transition: 0.4s;
+}
+#mainNav li.nav-icon .fa-instagram {
+	color: #4c5fd7;
+}
+#mainNav li.nav-icon .fa-instagram:hover {
+	color: #4352b9;
 	transition: 0.4s;
 }
 #mainNav .dropdown-menu li:hover .sub-menu {

@@ -27,6 +27,11 @@
 *   4. Contact Page
 *     4.1 contact_page_header_image
 *     4.2 contact_page_header_message
+*   5. Social Links
+*     5.1 facebook_link
+*     5.2 twitter_link
+*     5.3 linkedin_link
+*     5.1 instagram_link
 */
 
 function pdw_customize_register( $wp_customize ) {
@@ -269,11 +274,11 @@ function pdw_customize_register( $wp_customize ) {
   // ************************************************************************
 
   // ********** 4. Contact Page **********
-  $wp_customize->add_section('contact_page', array(
-    'title'       => __('Contact Page', 'peterwebdev'),
-    'description' => __('Options for the Contact Pace', 'peterwebdev'),
-    'priority'    => 114
-  ));
+    $wp_customize->add_section('contact_page', array(
+      'title'       => __('Contact Page', 'peterwebdev'),
+      'description' => __('Options for the Contact Pace', 'peterwebdev'),
+      'priority'    => 114
+    ));
 
     // ********** 4.1 Contact Page Header Image **********
       $wp_customize->add_setting('contact_page_header_image', array(
@@ -299,5 +304,66 @@ function pdw_customize_register( $wp_customize ) {
         'settings' => 'contact_page_message',
         'priority' => 2
       ));
+  // ************************************************************************
+
+  // ********** 5. Social Links **********
+    $wp_customize->add_section('social_links', array(
+      'title'       => __('Social Links', 'peterwebdev'),
+      'description' => __('Options for the social links', 'peterwebdev'),
+      'priority'    => 115
+    ));
+
+    // ********** 5.1 Facebook **********
+    $wp_customize->add_setting('facebook_link', array(
+      'default' => 'http://www.facebook.com',
+      'type'    => 'theme_mod'
+    ));
+    $wp_customize->add_control('facebook_link', array(
+      'type'     => 'text',
+      'label'    => __('Facebook Link', 'peterwebdev'),
+      'section'  => 'social_links',
+      'settings' => 'facebook_link',
+      'priority' => 1
+    ));
+
+    // ********** 5.2 Twitter **********
+    $wp_customize->add_setting('twitter_link', array(
+      'default' => 'http://www.twitter.com',
+      'type'    => 'theme_mod'
+    ));
+    $wp_customize->add_control('twitter_link', array(
+      'type'     => 'text',
+      'label'    => __('Twitter Link', 'peterwebdev'),
+      'section'  => 'social_links',
+      'settings' => 'twitter_link',
+      'priority' => 2
+    ));
+
+    // ********** 5.3 LinkedIn **********
+    $wp_customize->add_setting('linkedin_link', array(
+      'default' => 'http://www.linkedin.com',
+      'type'    => 'theme_mod'
+    ));
+    $wp_customize->add_control('linkedin_link', array(
+      'type'     => 'text',
+      'label'    => __('LinkedIn Link', 'peterwebdev'),
+      'section'  => 'social_links',
+      'settings' => 'linkedin_link',
+      'priority' => 3
+    ));
+
+    // ********** 5.4 Instagram **********
+    $wp_customize->add_setting('instagram_link', array(
+      'default' => 'http://www.instagram.com',
+      'type'    => 'theme_mod'
+    ));
+    $wp_customize->add_control('instagram_link', array(
+      'type'     => 'text',
+      'label'    => __('Instagram Link', 'peterwebdev'),
+      'section'  => 'social_links',
+      'settings' => 'instagram_link',
+      'priority' => 3
+    ));
+  // ************************************************************************
 }
 add_action( 'customize_register', 'pdw_customize_register' );

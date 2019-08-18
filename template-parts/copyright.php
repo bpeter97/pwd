@@ -19,10 +19,10 @@
 						<div class="card-body">
 							<h5 class="card-title text-center">Social Media</h5>
 							<ul class="list">
-								<li class="list-item">Facebook</li>
-								<li class="list-item">Twitter</li>
-								<li class="list-item">Linked In</li>
-								<li class="list-item">Instagram</li>
+								<li class="list-item"><a href="<?= get_theme_mod('facebook_link','#'); ?>">Facebook</a></li>
+								<li class="list-item"><a href="<?= get_theme_mod('twitter_link','#'); ?>">Twitter</a></li>
+								<li class="list-item"><a href="<?= get_theme_mod('linkedin_link','#'); ?>">Linked In</a></li>
+								<li class="list-item"><a href="<?= get_theme_mod('instagram_link','#'); ?>">Instagram</a></li>
 							</ul>
 						</div>
 					</div>
@@ -51,7 +51,7 @@
 								<li class="list-item">Some PO Box?</li>
 								<li class="list-item">Visalia, C.A., U.S.A.</li>
 								<li class="list-item">Phone: 555-555-5555</li>
-								<li class="list-item">Email: info@pwd.com</li>
+								<li class="list-item">Email: info@peterwebdevelopment.com</li>
 							</ul>
 						</div>
 					</div>
