@@ -5,29 +5,36 @@ Template Name: About Page
 ?>
 
 <?php get_header(); ?>
+	<style>
+		#headerSection .container-fluid {
+			background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+				url(<?= get_theme_mod('about_page_header_image', get_bloginfo('template_url').'/assets/imgs/headers/headerbg-min.jpg') ?>) repeat 0 0;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	</style>
 
 	<section id="headerSection" class="">
-		<div class="container-fluid about">
+		<div class="container-fluid">
 			<div class="d-flex flex-row">
 				<div class="col mx-auto my-auto pt-5 about" id="headerCol">
 					<div class="container pt-5 text-left">
 						<div class="row">
 							<div class="col-12 col-lg-6">
 								<span id="headerTopText" class="h1 text-uppercase">
-                  About
-                </span>
-                <?php if( get_field('sub_heading') ): ?>
-                  <p class="pt-2"><?php the_field('sub_heading'); ?></p>
-                <?php endif; ?>
+                  <?= get_theme_mod('about_page_header_title', 'About'); ?>
+								</span>
+								<p class="pt-2"><?= get_theme_mod('about_page_header_text', 'Edit the "About Page Header Text" in the customizer.'); ?></p>
 								<br />
-								<button type="button" onclick="window.location.href = './contact.html';" class="btn btn-primary mt-2 header-button ml-0">
+								<button type="button" onclick="window.location.href = './#contact';" class="btn btn-primary mt-2 header-button ml-0">
                   Contact Us
                 </button>
 							</div>
 							<div class="col-12 col-lg-6 text-center">
                 <?php if( get_field('video_url') ): ?>
                   <div class="embed-responsive embed-responsive-16by9">
-									  <iframe class="embed-responsive" src="<?php the_field('video_url'); ?>" allowfullscreen></iframe>
+									  <iframe class="embed-responsive" src="https://www.youtube.com/embed/<?= get_theme_mod('about_page_youtube_id', 'CCSGelSCPGE'); ?>" allowfullscreen></iframe>
 								  </div>
                 <?php endif; ?>
 							</div>
@@ -49,11 +56,8 @@ Template Name: About Page
 					</h2>
 					<?php 
 						while ( have_posts() ):
-
-							the_post();
-						
+							the_post();			
 							the_content();
-							// get_template_part('template-parts/content-paragraph');
 						endwhile;
 					?>
 					<!-- <p>
@@ -102,15 +106,13 @@ Template Name: About Page
 					<div class="team team-member-style team-mask-circle team-member-zoom-rotate">
 						<div class="team-layout">
 							<div class="team-member-image-outer">
-							<?php $bpimage = get_field('brian_peter_image'); ?>
-    						<img src="<?php echo $bpimage['url']; ?>" alt="<?php echo $bpimage['alt']; ?>" class="team-member-image" />
-								<!-- <img src="./img/brian.png" alt="Brian L. Peter Jr. (Owner)" class="team-member-image"> -->
+    						<img src="<?= get_theme_mod('about_page_team_brian_image', get_bloginfo('template_directory').'/assets/imgs/team/brian.png'); ?>" alt="<?= get_theme_mod('about_page_team_brian_image_alt', 'An Image'); ?>" class="team-member-image" />
 							</div>
 							<div class="team-member-text-outer">
 								<div class="team-member-text-inner">
 									<div class="team-member-text">
-										<h3 class="team-member-name">Brian L. Peter Jr.</h3>
-										<span class="team-member-title">Owner / Web Developer</span>
+										<h3 class="team-member-name"><?= get_theme_mod('about_page_team_brian_name', 'Brian L. Peter Jr.'); ?></h3>
+										<span class="team-member-title"><?= get_theme_mod('about_page_team_brian_title', 'Owner / Web Developer'); ?></span>
 									</div>
 								</div>
 							</div>
@@ -121,14 +123,13 @@ Template Name: About Page
 					<article class="team team-member-style team-mask-circle team-member-zoom-rotate text-center">
 						<div class="team-layout">
 							<div class="team-member-image-outer">
-							<?php $chelsimage = get_field('chelsea_peter_image'); ?>
-    						<img src="<?php echo $chelsimage['url']; ?>" alt="<?php echo $chelsimage['alt']; ?>" class="team-member-image" />
+								<img src="<?= get_theme_mod('about_page_team_chelsea_image', get_bloginfo('template_directory').'/assets/imgs/team/chelsea.png'); ?>" alt="<?= get_theme_mod('about_page_team_brian_image_alt', 'An Image'); ?>" class="team-member-image" />
 							</div>
 							<div class="team-member-text-outer">
 								<div class="team-member-text-inner">
 									<div class="team-member-text">
-										<h3 class="team-member-name">Chelsea C. Peter</h3>
-										<span class="team-member-title">Co-Owner / Brand Ambassador</span>
+										<h3 class="team-member-name"><?= get_theme_mod('about_page_team_chelsea_name', 'Chelsea C. Peter'); ?></h3>
+										<span class="team-member-title"><?= get_theme_mod('about_page_team_chelsea_name', 'Co-Owner / Consultant'); ?></span>
 									</div>
 								</div>
 							</div>

@@ -19,7 +19,7 @@ body {
 }
 
 .mb-100 {
-	margin-bottom: 100px;
+	m`gin-bottom: 100px;
 }
 
 .no-js #loader {
@@ -583,8 +583,10 @@ body {
 #copyright #footerRow .card .list a {
 	color: white;
 }
-#copyright #footerRow .card .list a:hover,
+#copyright #footerRow .card .list a:hover {
+	color: #a6d1ff;
+}
 #copyright #footerRow .card .list a:active,
 #copyright #footerRow .card .list a:visited {
-	color: #a6d1ff;
+	color: white;
 }

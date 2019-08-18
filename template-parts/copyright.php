@@ -6,10 +6,10 @@
 						<div class="card-body">
 							<h5 class="card-title text-center">Links</h5>
 							<ul class="list">
-								<li class="list-item"><a href="./about.html">About</a></li>
-								<li class="list-item">Contact</li>
+								<li class="list-item"><a href="./about">About</a></li>
+								<li class="list-item"><a href="./contact">Contact</a></li>
 								<li class="list-item">Blog</li>
-								<li class="list-item">Services</li>
+								<li class="list-item"><a href="./#services">Services</a></li>
 							</ul>
 						</div>
 					</div>
