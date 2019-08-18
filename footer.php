@@ -85,7 +85,7 @@
 			if (width < 1210) {
 				document.getElementById("headerSection").style.marginTop = "30px";
 			} else {
-				document.getElementById("headerSection").style.marginTop = "70px";
+				document.getElementById("headerSection").style.marginTop = "30px";
 			}
 			if (width < 768) {
 				document.getElementById("headerCol").style.paddingTop = "80px";

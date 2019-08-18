@@ -48,10 +48,10 @@
 	<div class="spinner"></div>
 	<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" id="mainNav">
 		<div class="container">
-			<a href="<?php get_bloginfo('wpurl'); ?>">
+			<a href="https://www.peterwebdevelopment.com">
 				<img class="mr-3 d-none d-sm-block" src="<?= get_bloginfo('template_url').'/assets/imgs/PWD.png'; ?>" alt="Peter Web Development Logo" id="navbar-logo" />
 			</a>
-			<a class="navbar-brand" id="navbarBrand" href="<?php get_bloginfo('wpurl'); ?>">
+			<a class="navbar-brand" id="navbarBrand" href="https://www.peterwebdevelopment.com">
 				Peter Web Development
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"

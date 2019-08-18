@@ -17,7 +17,7 @@
 								></span> websites that sell!
 					</span>
 					</span><br /><br /><br />
-					<button href="./about.html" onclick="window.location.href = './about.html';" id="" type="button" class="btn btn-primary mt-3 text-uppercase header-button">
+					<button href="./about" onclick="window.location.href = './about';" id="" type="button" class="btn btn-primary mt-3 text-uppercase header-button">
 						Who We Are
 					</button>
 					<button href="#services" onclick="window.location.href = '#services';" id="" type="button" class="btn btn-primary mt-3 text-uppercase header-button">
