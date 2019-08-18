@@ -32,11 +32,9 @@ Template Name: About Page
                 </button>
 							</div>
 							<div class="col-12 col-lg-6 text-center">
-                <?php if( get_field('video_url') ): ?>
-                  <div class="embed-responsive embed-responsive-16by9">
-									  <iframe class="embed-responsive" src="https://www.youtube.com/embed/<?= get_theme_mod('about_page_youtube_id', 'CCSGelSCPGE'); ?>" allowfullscreen></iframe>
-								  </div>
-                <?php endif; ?>
+								<div class="embed-responsive embed-responsive-16by9">
+									<iframe class="embed-responsive" src="https://www.youtube.com/embed/<?= get_theme_mod('about_page_youtube_id', 'CCSGelSCPGE'); ?>" allowfullscreen></iframe>
+								</div>
 							</div>
 						</div>
 					</div>

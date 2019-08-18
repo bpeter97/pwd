@@ -8,7 +8,7 @@ Template Name: Contact Page
 	<style>
 		#headerSection .container-fluid {
 			background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-				url(<?= get_theme_mod('contact_page_header_image', get_bloginfo('template_url').'/assets/imgs/headers/conntact.jpg') ?>) repeat 0 0;
+				url(<?= get_theme_mod('contact_page_header_image', get_bloginfo('template_url').'/assets/imgs/headers/contact.jpg') ?>) repeat 0 0;
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -25,7 +25,7 @@ Template Name: Contact Page
 								<span id="headerTopText" class="h1 text-uppercase">
                   <?= get_theme_mod('contact_page_header_title', 'Contact'); ?>
 								</span>
-								<p class="pt-2"><?= get_theme_mod('contact_page_header_text', 'Edit the "Contact Page Header Text" in the customizer.'); ?></p>
+								<p class="pt-2"><?= get_theme_mod('contact_page_message', 'Edit the "Contact Page Header Message" in the customizer.'); ?></p>
 								<br />
 								<button type="button" onclick="window.location.href = './#contact';" class="btn btn-primary mt-2 header-button ml-0">
                   Contact Us
