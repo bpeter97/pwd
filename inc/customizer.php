@@ -25,7 +25,8 @@
 *   3. Mission Statement
 *     3.1 mission_statement_message
 *   4. Contact Page
-*     4.1 contact_page_header_text
+*     4.1 contact_page_header_image
+*     4.2 contact_page_header_message
 */
 
 function pdw_customize_register( $wp_customize ) {
@@ -274,17 +275,29 @@ function pdw_customize_register( $wp_customize ) {
     'priority'    => 114
   ));
 
-  // ********** 4.1 Contact Page Message **********
-    $wp_customize->add_setting('contact_page_message', array(
-      'default' => 'Contact Page Message: Edit this in the customizer.',
-      'type'    => 'theme_mod'
-    ));
-    $wp_customize->add_control('contact_page_message', array(
-      'type'     => 'textarea',
-      'label'    => __('Contact Page Message', 'peterwebdev'),
-      'section'  => 'contact_page',
-      'settings' => 'contact_page_message',
-      'priority' => 1
-    ));
+    // ********** 4.1 Contact Page Header Image **********
+      $wp_customize->add_setting('contact_page_header_image', array(
+        'default' => get_bloginfo('template_directory').'/assets/imgs/headers/contact.jpg',
+        'type'    => 'theme_mod'
+      ));
+      $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'contact_page_header_image', array(
+        'label'    => __('Header Image', 'peterwebdev'),
+        'section'  => 'contact_page',
+        'settings' => 'contact_page_header_image',
+        'priority' => 1
+      )));
+
+    // ********** 4.2 Contact Page Message **********
+      $wp_customize->add_setting('contact_page_message', array(
+        'default' => 'Contact Page Message: Edit this in the customizer.',
+        'type'    => 'theme_mod'
+      ));
+      $wp_customize->add_control('contact_page_message', array(
+        'type'     => 'textarea',
+        'label'    => __('Contact Page Message', 'peterwebdev'),
+        'section'  => 'contact_page',
+        'settings' => 'contact_page_message',
+        'priority' => 2
+      ));
 }
 add_action( 'customize_register', 'pdw_customize_register' );
