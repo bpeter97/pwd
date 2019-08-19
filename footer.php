@@ -1,4 +1,6 @@
-	<!-- Optional JavaScript -->
+<button onclick="topFunction()" id="scrollToTopButton" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+<!-- Optional JavaScript -->
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
 	 crossorigin="anonymous"></script>
@@ -102,11 +104,21 @@
 				document.getElementById("mainNav").style.padding = ".4rem 1rem";
 				document.getElementById("mainNav").style.fontSize = "18px";
 				document.getElementById("navbarBrand").style.fontSize = "24px";
+				document.getElementById("scrollToTopButton").style.opacity = "100";
 			} else {
 				document.getElementById("mainNav").style.padding = "2rem 1rem";
 				document.getElementById("mainNav").style.fontSize = "24px";
 				document.getElementById("navbarBrand").style.fontSize = "30px";
+				document.getElementById("scrollToTopButton").style.opacity = "0";
 			}
+		}
+	</script>
+
+	<script>
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
 		}
 	</script>
 
