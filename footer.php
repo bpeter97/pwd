@@ -78,11 +78,13 @@
 
 		if (width > 1300) {
 			window.onscroll = function () {
+				document.getElementById("scrollToTopButton").style.right = "24px";
 				showScrollToTop();
 				scrollFunction();
 			}
 		} else {
 			window.onscroll = function () {
+				document.getElementById("scrollToTopButton").style.right = "32px";
 				showScrollToTop();
 			}
 			document.getElementById("mainNav").style.padding = ".4rem 1rem";
