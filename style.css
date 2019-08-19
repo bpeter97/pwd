@@ -547,18 +547,6 @@ body {
 	line-height: 1.8;
 }
 
-#servers {
-	padding-top: 50px;
-	padding-bottom: 50px;
-	text-align: center;
-}
-
-#businessServers {
-	padding-top: 50px;
-	padding-bottom: 50px;
-	text-align: center;
-}
-
 #letsBuild {
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -614,7 +602,7 @@ body {
 }
 
 #scrollToTopButton {
-  display: block;
+	display: block;
 	bottom: 100px;
 	font-size: 24px;
 	border: none;
@@ -644,4 +632,109 @@ body {
 	color: white;
 	background: #0069d9;
 	transition: 0.4s;
+}
+
+#servers {
+	/* background: -webkit-linear-gradient(#d3d3d3, white, #d3d3d3);
+	background: -o-linear-gradient(#d3d3d3, white, #d3d3d3);
+	background: -moz-linear-gradient(#d3d3d3, white, #d3d3d3);
+	background: linear-gradient(#d3d3d3, white, #d3d3d3); */
+	background: rgba(247, 247, 247, 1);
+	background: -moz-linear-gradient(
+		top,
+		rgba(247, 247, 247, 1) 0%,
+		rgba(255, 255, 255, 1) 53%,
+		rgba(247, 247, 247, 1) 100%
+	);
+	background: -webkit-gradient(
+		left top,
+		left bottom,
+		color-stop(0%, rgba(247, 247, 247, 1)),
+		color-stop(53%, rgba(255, 255, 255, 1)),
+		color-stop(100%, rgba(247, 247, 247, 1))
+	);
+	background: -webkit-linear-gradient(
+		top,
+		rgba(247, 247, 247, 1) 0%,
+		rgba(255, 255, 255, 1) 53%,
+		rgba(247, 247, 247, 1) 100%
+	);
+	background: -o-linear-gradient(
+		top,
+		rgba(247, 247, 247, 1) 0%,
+		rgba(255, 255, 255, 1) 53%,
+		rgba(247, 247, 247, 1) 100%
+	);
+	background: -ms-linear-gradient(
+		top,
+		rgba(247, 247, 247, 1) 0%,
+		rgba(255, 255, 255, 1) 53%,
+		rgba(247, 247, 247, 1) 100%
+	);
+	background: linear-gradient(
+		to bottom,
+		rgba(247, 247, 247, 1) 0%,
+		rgba(255, 255, 255, 1) 53%,
+		rgba(247, 247, 247, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(
+			startColorstr="#f7f7f7",
+			endColorstr="#f7f7f7",
+			GradientType=0
+		);
+	-webkit-box-shadow: 0px 20px 54px -23px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 20px 54px -23px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 20px 54px -23px rgba(0, 0, 0, 0.75);
+}
+
+#servers .card {
+	-webkit-box-shadow: 0px 0px 25px -6px rgba(0, 0, 0, 0.37);
+	-moz-box-shadow: 0px 0px 25px -6px rgba(0, 0, 0, 0.37);
+	box-shadow: 0px 0px 25px -6px rgba(0, 0, 0, 0.37);
+}
+
+#hostingFeatures {
+	background: #3492e1;
+	background: -moz-radial-gradient(
+		center,
+		ellipse cover,
+		#3492e1 0%,
+		#006db2 50%,
+		#005b97 100%
+	);
+	background: -webkit-radial-gradient(
+		center,
+		ellipse cover,
+		#3492e1 0%,
+		#006db2 50%,
+		#005b97 100%
+	);
+	background: radial-gradient(
+		ellipse at center,
+		#3492e1 0%,
+		#006db2 50%,
+		#005b97 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(
+			startColorstr="#3492e1",
+			endColorstr="#005b97",
+			GradientType=1
+		);
+}
+#hostingFeatures .feature-box {
+	background-color: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border: 1px solid black;
+	-webkit-box-shadow: 0px 0px 25px -6px rgba(0, 0, 0, 0.37);
+	-moz-box-shadow: 0px 0px 25px -6px rgba(0, 0, 0, 0.37);
+	box-shadow: 0px 0px 25px -6px rgba(0, 0, 0, 0.37);
+}
+#hostingFeatures .feature-box .feature {
+	font-size: 1.4rem;
+}
+#hostingFeatures .container .row .feature-title {
+	color: white;
+	font-weight: bold;
+	text-shadow: 1px 2px #3a3a3a;
 }
