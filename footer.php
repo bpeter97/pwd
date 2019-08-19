@@ -78,9 +78,13 @@
 
 		if (width > 1300) {
 			window.onscroll = function () {
+				showScrollToTop();
 				scrollFunction();
 			}
 		} else {
+			window.onscroll = function () {
+				showScrollToTop();
+			}
 			document.getElementById("mainNav").style.padding = ".4rem 1rem";
 			document.getElementById("mainNav").style.fontSize = "18px";
 			document.getElementById("navbarBrand").style.fontSize = "24px";
@@ -92,8 +96,17 @@
 			if (width < 768) {
 				document.getElementById("headerCol").style.paddingTop = "80px";
 			}
+		}
 
-
+		function showScrollToTop() {
+		if (
+				document.body.scrollTop > 50 ||
+				document.documentElement.scrollTop > 50
+			) {
+				document.getElementById("scrollToTopButton").style.opacity = "100";
+			} else {
+				document.getElementById("scrollToTopButton").style.opacity = "0";
+			}
 		}
 
 		function scrollFunction() {
@@ -104,12 +117,12 @@
 				document.getElementById("mainNav").style.padding = ".4rem 1rem";
 				document.getElementById("mainNav").style.fontSize = "18px";
 				document.getElementById("navbarBrand").style.fontSize = "24px";
-				document.getElementById("scrollToTopButton").style.opacity = "100";
+				// document.getElementById("scrollToTopButton").style.opacity = "100";
 			} else {
 				document.getElementById("mainNav").style.padding = "2rem 1rem";
 				document.getElementById("mainNav").style.fontSize = "24px";
 				document.getElementById("navbarBrand").style.fontSize = "30px";
-				document.getElementById("scrollToTopButton").style.opacity = "0";
+				// document.getElementById("scrollToTopButton").style.opacity = "0";
 			}
 		}
 	</script>
