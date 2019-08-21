@@ -69,6 +69,8 @@ Template Name: Blog Home Page
     </div>
   </section>
 
+  <?php get_template_part('template-parts/blog/blog-listings'); ?>
+
   <?php get_template_part('template-parts/servers'); ?>
 
   <?php get_template_part('template-parts/services'); ?>
