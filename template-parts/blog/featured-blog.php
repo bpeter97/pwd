@@ -1,7 +1,6 @@
-<?php if ( has_post_thumbnail() ): ?>
-  <?php $featured_image = get_the_post_thumbnail_url(the_ID()); ?>
-<?php endif; ?>
-<div class="item active">
+  <?php if ( has_post_thumbnail() ): ?>
+    <?php $featured_image = get_the_post_thumbnail_url(the_ID()); ?>
+  <?php endif; ?>
   <img src="<?= $featured_image ?>" alt="">
   <div class="carousel-caption">
     <h1><?php the_title(); ?></h1>
