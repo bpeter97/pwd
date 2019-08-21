@@ -15,6 +15,7 @@ require_once get_template_directory() . '/inc/customizer.php';
 
 define('FS_METHOD', 'direct');
 add_filter( 'widget_text', 'do_shortcode' );
+add_theme_support( 'post-thumbnails' );
 
 /* *********** 2. Theme Support ***********
 #

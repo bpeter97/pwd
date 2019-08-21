@@ -32,6 +32,10 @@
 *     5.2 twitter_link
 *     5.3 linkedin_link
 *     5.1 instagram_link
+*   6. Hosting
+*     6.1 hosting_header_image
+*     6.2 hosting_header_image
+*     6.3 hosting_header_text
 */
 
 function pdw_customize_register( $wp_customize ) {
@@ -314,56 +318,89 @@ function pdw_customize_register( $wp_customize ) {
     ));
 
     // ********** 5.1 Facebook **********
-    $wp_customize->add_setting('facebook_link', array(
-      'default' => 'http://www.facebook.com',
-      'type'    => 'theme_mod'
-    ));
-    $wp_customize->add_control('facebook_link', array(
-      'type'     => 'text',
-      'label'    => __('Facebook Link', 'peterwebdev'),
-      'section'  => 'social_links',
-      'settings' => 'facebook_link',
-      'priority' => 1
-    ));
+      $wp_customize->add_setting('facebook_link', array(
+        'default' => 'http://www.facebook.com',
+        'type'    => 'theme_mod'
+      ));
+      $wp_customize->add_control('facebook_link', array(
+        'type'     => 'text',
+        'label'    => __('Facebook Link', 'peterwebdev'),
+        'section'  => 'social_links',
+        'settings' => 'facebook_link',
+        'priority' => 1
+      ));
 
     // ********** 5.2 Twitter **********
-    $wp_customize->add_setting('twitter_link', array(
-      'default' => 'http://www.twitter.com',
-      'type'    => 'theme_mod'
-    ));
-    $wp_customize->add_control('twitter_link', array(
-      'type'     => 'text',
-      'label'    => __('Twitter Link', 'peterwebdev'),
-      'section'  => 'social_links',
-      'settings' => 'twitter_link',
-      'priority' => 2
-    ));
+      $wp_customize->add_setting('twitter_link', array(
+        'default' => 'http://www.twitter.com',
+        'type'    => 'theme_mod'
+      ));
+      $wp_customize->add_control('twitter_link', array(
+        'type'     => 'text',
+        'label'    => __('Twitter Link', 'peterwebdev'),
+        'section'  => 'social_links',
+        'settings' => 'twitter_link',
+        'priority' => 2
+      ));
 
     // ********** 5.3 LinkedIn **********
-    $wp_customize->add_setting('linkedin_link', array(
-      'default' => 'http://www.linkedin.com',
-      'type'    => 'theme_mod'
-    ));
-    $wp_customize->add_control('linkedin_link', array(
-      'type'     => 'text',
-      'label'    => __('LinkedIn Link', 'peterwebdev'),
-      'section'  => 'social_links',
-      'settings' => 'linkedin_link',
-      'priority' => 3
-    ));
+      $wp_customize->add_setting('linkedin_link', array(
+        'default' => 'http://www.linkedin.com',
+        'type'    => 'theme_mod'
+      ));
+      $wp_customize->add_control('linkedin_link', array(
+        'type'     => 'text',
+        'label'    => __('LinkedIn Link', 'peterwebdev'),
+        'section'  => 'social_links',
+        'settings' => 'linkedin_link',
+        'priority' => 3
+      ));
 
     // ********** 5.4 Instagram **********
-    $wp_customize->add_setting('instagram_link', array(
-      'default' => 'http://www.instagram.com',
-      'type'    => 'theme_mod'
+      $wp_customize->add_setting('instagram_link', array(
+        'default' => 'http://www.instagram.com',
+        'type'    => 'theme_mod'
+      ));
+      $wp_customize->add_control('instagram_link', array(
+        'type'     => 'text',
+        'label'    => __('Instagram Link', 'peterwebdev'),
+        'section'  => 'social_links',
+        'settings' => 'instagram_link',
+        'priority' => 3
+      ));
+  // ************************************************************************
+
+  // ********** 6. Hosting Page **********
+    $wp_customize->add_section('hosting_page', array(
+      'title'       => __('Hosting Page', 'peterwebdev'),
+      'description' => __('Options for the Hosting Pace', 'peterwebdev'),
+      'priority'    => 114
     ));
-    $wp_customize->add_control('instagram_link', array(
-      'type'     => 'text',
-      'label'    => __('Instagram Link', 'peterwebdev'),
-      'section'  => 'social_links',
-      'settings' => 'instagram_link',
-      'priority' => 3
-    ));
+
+    // ********** 4.1 Hosting Page Header Image **********
+      $wp_customize->add_setting('hosting_page_header_image', array(
+        'default' => get_bloginfo('template_directory').'/assets/imgs/headers/servers.jpg',
+        'type'    => 'theme_mod'
+      ));
+      $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hosting_page_header_image', array(
+        'label'    => __('Header Image', 'peterwebdev'),
+        'section'  => 'hosting_page',
+        'settings' => 'hosting_page_header_image',
+        'priority' => 1
+      )));
+
+    // ********** 4.2 Hosting Page Text **********
+      $wp_customize->add_setting('hosting_page_text', array(
+        'default' => 'Hosting Page Text: Edit this in the customizer.',
+        'type'    => 'theme_mod'
+      ));
+      $wp_customize->add_control('hosting_page_text', array(
+        'type'     => 'textarea',
+        'label'    => __('Hosting Page Text', 'peterwebdev'),
+        'section'  => 'hosting_page',
+        'settings' => 'hosting_page_text',
+        'priority' => 2
+      ));
   // ************************************************************************
 }
 add_action( 'customize_register', 'pdw_customize_register' );

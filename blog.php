@@ -1,3 +1,10 @@
+<?php
+/*
+Template Name: Blog Home Page
+*/
+?>
+
+
 <?php get_header(); ?>
 	<style>
 		#headerSection .container-fluid {
@@ -27,7 +34,7 @@
     </style>
 
 	<section id="blogHomeHeader" class="">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -36,12 +43,19 @@
       <div class="carousel-inner">
         <?php 
 
-				// $featured_query = new WP_Query('category_name=feature&showposts=3');
-				if ( have_posts() ) : while ( have_posts() ): the_post(); 
+        $featured_query = new WP_Query('category_name=feature&showposts=3');
 
-          get_template_part('template-parts/blog/featured-blog', get_post_format() );
+        if ( $featured_query->have_posts() ) : $featured_index = 0; while ( $featured_query->have_posts() ): $featured_query->the_post(); ?>
+        
+          <?php if ( $featured_index == 0 ) : ?>
+          <div class="carousel-item active">
+          <?php else : ?>
+          <div class="carousel-item">
+          <?php endif;
+          get_template_part('template-parts/blog/featured-blog', $featured_query->get_post_format() );
+          $featured_index++;
 
-        endwhile; else: echo 'No posts..'; endif;
+        endwhile; endif;
         ?>
       </div>
       <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
@@ -54,7 +68,7 @@
       </a>
     </div>
   </section>
-  
+
   <?php get_template_part('template-parts/servers'); ?>
 
   <?php get_template_part('template-parts/services'); ?>
