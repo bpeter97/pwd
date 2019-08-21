@@ -68,8 +68,19 @@ Template Name: Blog Home Page
       </a>
     </div>
   </section>
-
-  <?php get_template_part('template-parts/blog/blog-listings'); ?>
+  
+  <section id="blogListings">
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col-md-8">
+          <?php get_template_part('template-parts/blog/blog-listings'); ?>
+        </div>
+        <div class="col-md-4">
+          <?php get_template_part('template-parts/blog/sidebar'); ?>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <?php get_template_part('template-parts/servers'); ?>
 

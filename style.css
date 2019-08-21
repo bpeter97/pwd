@@ -810,10 +810,78 @@ body {
 	height: 100%;
 }
 #blogListings {
-	background-color: #f3f3f3;
+	background-color: #ffffff;
 }
-#blogListings .card {
+#blogListings .right-card {
 	-webkit-box-shadow: 0px 0px 10px -6px rgba(0, 0, 0, 0.37);
 	-moz-box-shadow: 0px 0px 10px -6px rgba(0, 0, 0, 0.37);
 	box-shadow: 0px 0px 10px -6px rgba(0, 0, 0, 0.37);
+}
+#blogListings .left-card {
+	border: none;
+}
+#blogListings .left-card .card-footer {
+	border: none;
+	background-color: white;
+}
+#blogListings .left-card .card-title {
+	font-family: "Roboto", sans-serif;
+}
+#blogListings .left-card .blog-tag {
+	padding: 3px;
+	background-color: #3492e1;
+	color: white;
+	margin: 3px;
+	border: 1px solid transparent;
+	font-size: 14px;
+}
+#blogListings .left-card .blog-tag:hover {
+	padding: 3px;
+	background-color: transparent;
+	color: #3492e1;
+	margin: 3px;
+	border: 1px solid #3492e1;
+	transition: 0.4s;
+	font-size: 14px;
+}
+#blogListings .left-card .blog-date {
+	color: #6c757d;
+}
+#blogListings .left-card .sharables {
+	padding: 5px;
+	margin: 4px;
+	color: #6c757d;
+}
+#blogListings .left-card .sharables:hover {
+	padding: 5px;
+	margin: 4px;
+	color: #3492e1;
+	transition: 0.4s;
+}
+#blogListings .left-card .sharables a {
+	color: #6c757d;
+	text-decoration: none;
+}
+#blogListings .left-card .sharables a:hover {
+	color: #3492e1;
+	transition: 0.4s;
+	text-decoration: none;
+}
+#blogListings .left-card .read-more {
+	-webkit-box-shadow: 0px 0px 10px -6px rgba(0, 0, 0, 0.37);
+	-moz-box-shadow: 0px 0px 10px -6px rgba(0, 0, 0, 0.37);
+	box-shadow: 0px 0px 10px -6px rgba(0, 0, 0, 0.37);
+	color: #3492e1;
+	background-color: white;
+	border: 1px solid #3492e1;
+	padding: 10px;
+}
+#blogListings .left-card .read-more:hover {
+	-webkit-box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.37);
+	-moz-box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.37);
+	box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.37);
+	color: white;
+	background-color: #3492e1;
+	padding: 10px;
+	transition: 0.4s;
 }
