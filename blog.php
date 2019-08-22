@@ -24,68 +24,92 @@ Template Name: Blog Home Page
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
+        /* position: absolute;
+        left: 50% !important;
+        top: 50% !important;
+        -webkit-transform: translateY(-50%) translateX(-50%); */
       }
 
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
+        #blogHomeHeader .carousel-item {
+          height: 32rem;
+        }
+        #blogHomeHeader .carousel-item > img{
+          /* height: 32rem;
+          width: auto; */
+        }
+      }
+
+      @media (max-width: 768px) {
+        #blogHomeHeader .carousel {
+          margin-bottom: 0px;
+          padding-top: 0.8rem;
+        }
+
+        #blogHomeHeader .carousel-caption {
+          bottom: 0;
+        }
       }
     </style>
 
 	<section id="blogHomeHeader">
-    
-  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
-        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="0" class="d-none d-md-block active"></li>
+        <li data-target="#myCarousel" data-slide-to="1" class="d-none d-md-block"></li>
+        <li data-target="#myCarousel" data-slide-to="2" class="d-none d-md-block"></li>
       </ol>
-
-      <!-- Wrapper for slides -->
       <div class="carousel-inner">
-        <?php 
-        $featured_query = new WP_Query('category_name=feature&showposts=3');
-
-        if ( $featured_query->have_posts() ) : $featured_index = 0; while ( $featured_query->have_posts() ): $featured_query->the_post(); ?>
         
-          <?php if ( $featured_index == 0 ) : ?>
-          <div class="item active">
-          <?php else : ?>
-          <div class="item">
-          <?php endif;
-          get_template_part('template-parts/blog/featured-blog', $featured_query->get_post_format() );
-          $featured_index++; ?>
-          </div>
+        <?php 
+          $featured_query = new WP_Query('category_name=feature&showposts=3');
 
-        <?php endwhile; endif; ?>
+          if ( $featured_query->have_posts() ) : $featured_index = 0; while ( $featured_query->have_posts() ): $featured_query->the_post(); ?>
+
+            <?php if ( $featured_index == 0 ) : ?>
+            <div class="carousel-item active">
+            <?php else : ?>
+            <div class="carousel-item">
+            <?php endif;
+            get_template_part('template-parts/blog/featured-blog', $featured_query->get_post_format() );
+            echo '</div>';
+            $featured_index++;
+
+          endwhile; endif;
+        ?>
+
       </div>
-
-      <!-- Controls -->
-      <a class="carousel-control-prev" href="#carousel-example-generic" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
+      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
-      <a class="carousel-control-next" href="#carousel-example-generic" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
     </div>
-
-
-      
-      
   </section>
-  
+
   <section id="blogListings">
     <div class="container pt-5">
       <div class="row">
         <div class="col-md-8">
+        <?php 
+          $listing_query = new WP_Query('category_name=feature&showposts=3');
+
+          if ( $listing_query->have_posts() ) : $featured_index = 0; while ( $listing_query->have_posts() ): $listing_query->the_post();
+
+            get_template_part('template-parts/blog/blog-listings', $listing_query->get_post_format() );
+
+          endwhile; endif;
+        ?>
           <?php 
-            for ($i=0; $i < 3; $i++) { 
-              get_template_part('template-parts/blog/blog-listings');
-            }
+            // for ($i=0; $i < 3; $i++) { 
+            //   get_template_part('template-parts/blog/blog-listings');
+            // }
           ?>
         </div>
         <div class="col-md-4">
@@ -94,6 +118,8 @@ Template Name: Blog Home Page
       </div>
     </div>
   </section>
+
+  <?php get_template_part('template-parts/services'); ?>
   
   <section id="letsBuild">
 		<div class="container-fluid">

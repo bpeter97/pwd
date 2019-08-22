@@ -1,5 +1,8 @@
+<?php if ( has_post_thumbnail() ): ?>
+  <?php $featured_image = get_the_post_thumbnail_url(); ?>
+<?php endif; ?>
 <div class="card left-card mb-4">
-  <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+  <img class="card-img-top" src="<?= $featured_image ?>" alt="Card image cap">
   <div class="card-body pb-0">
     <div class="row">
       <div class="col-6 text-left">
@@ -31,13 +34,12 @@
       </div>
     </div>
     <div class="col-12 text-left pl-0 pt-2">
-      <span class="blog-date font-italic">Monday, January 1, 2017</span>
+      <span class="blog-date font-italic"><?php the_date(); ?></span>
     </div>
   </div>
   <div class="card-body">
-    <h2 class="card-title">Post Title</h2>
-    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis
-      soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+    <h2 class="card-title"><?php the_title(); ?></h2>
+    <?php the_content(); ?>
     <a href="#" class="btn read-more text-uppercase mt-3">Read More &rarr;</a>
   </div>
 </div>

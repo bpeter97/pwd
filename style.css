@@ -820,3 +820,24 @@ body {
 	padding: 10px;
 	transition: 0.4s;
 }
+
+#blogHomeHeader .carousel {
+	margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+#blogHomeHeader .carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+#blogHomeHeader .carousel-item {
+	overflow: hidden;
+}
+#blogHomeHeader .carousel-item > img {
+	display: block;
+	width: 100%;
+	height: auto;
+	z-index: -1;
+}
+
