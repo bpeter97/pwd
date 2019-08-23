@@ -24,10 +24,8 @@ Template Name: Blog Home Page
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
-        /* position: absolute;
-        left: 50% !important;
-        top: 50% !important;
-        -webkit-transform: translateY(-50%) translateX(-50%); */
+        height: 250px;
+        object-fit: cover;
       }
 
       @media (min-width: 768px) {
