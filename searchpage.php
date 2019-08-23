@@ -1,11 +1,16 @@
-<?php get_header(); ?>
-
+<?php
+/*
+Template Name: Search Page
+*/
+?>
 <?php
 
 global $wp_query;
 $total_results = $wp_query->found_posts;
 
 ?>
+
+<?php get_header(); ?>
 	<style>
 		#headerSection .container-fluid {
 			background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
@@ -24,11 +29,33 @@ $total_results = $wp_query->found_posts;
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
+        /* position: absolute;
+        left: 50% !important;
+        top: 50% !important;
+        -webkit-transform: translateY(-50%) translateX(-50%); */
       }
 
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
+        }
+        #blogHomeHeader .carousel-item {
+          height: 32rem;
+        }
+        #blogHomeHeader .carousel-item > img{
+          /* height: 32rem;
+          width: auto; */
+        }
+      }
+
+      @media (max-width: 768px) {
+        #blogHomeHeader .carousel {
+          margin-bottom: 0px;
+          padding-top: 0.8rem;
+        }
+
+        #blogHomeHeader .carousel-caption {
+          bottom: 0;
         }
       }
     </style>
@@ -59,8 +86,6 @@ $total_results = $wp_query->found_posts;
         </div>
       </div>
     </section>
-  
-  <?php get_template_part('template-parts/servers'); ?>
 
   <?php get_template_part('template-parts/services'); ?>
   
