@@ -12,45 +12,40 @@
 	</div><!-- #primary-sidebar -->
 <?php endif; ?>
 
-<!-- Categories Widget -->
 <div class="card mb-4">
   <h5 class="card-header">Categories</h5>
   <div class="card-body">
-    <div class="row">
-      <div class="col-lg-6">
-        <ul class="list-unstyled mb-0">
-          <li>
-            <a href="#">Web Design</a>
-          </li>
-          <li>
-            <a href="#">HTML</a>
-          </li>
-          <li>
-            <a href="#">Freebies</a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-lg-6">
-        <ul class="list-unstyled mb-0">
-          <li>
-            <a href="#">JavaScript</a>
-          </li>
-          <li>
-            <a href="#">CSS</a>
-          </li>
-          <li>
-            <a href="#">Tutorials</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <?php
+
+      $categories = get_categories( array(
+          'orderby' => 'name',
+          'order'   => 'ASC'
+      ) );
+      
+    ?>
+
+    <ul class="list-group list-group-flush">
+        <?php foreach( $categories as $category ):
+            $category_link = sprintf( 
+              '<a href="%1$s" alt="%2$s">%3$s</a>',
+              esc_url( get_category_link( $category->term_id ) ),
+              esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ),
+              esc_html( $category->name )
+          );
+
+        ?>
+      <li class="list-group-item">
+        <?= sprintf( esc_html__( '%s', 'textdomain' ), $category_link ); ?>
+      </li>
+        <?php endforeach; ?>
+    </ul>
   </div>
 </div>
 
-  <!-- Side Widget -->
-  <div class="card mb-4">
-    <h5 class="card-header">Side Widget</h5>
-    <div class="card-body">
-      You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
-    </div>
+<!-- Side Widget -->
+<div class="card mb-4">
+  <h5 class="card-header">Follow us on Twitter!</h5>
+  <div class="card-body">
+  <a class="twitter-timeline" href="https://twitter.com/peterwebdevelo2?ref_src=twsrc%5Etfw">Tweets by PWD</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
   </div>
+</div>

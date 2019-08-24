@@ -92,9 +92,9 @@ Class PWD_Recent_Posts_Widget extends WP_Widget_Recent_Posts {
       <div class="card mb-4">
         <h5 class="card-header"><?php if( $title ) echo $title; ?></h5>
         <div class="card-body">
-          <ul class="pl-3">
+          <ul class="list-group list-group-flush">
           <?php while( $r->have_posts() ) : $r->the_post(); ?>				
-          <li><?php the_time( 'F d'); ?> - <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></li>
+          <li class="list-group-item"><?php the_time( 'F d'); ?> - <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></li>
           <?php endwhile; ?>
         </ul>
         </div>
@@ -149,14 +149,14 @@ Class PWD_Recent_Comments_Widget extends WP_Widget_Recent_Comments {
       <div class="card mb-4">
         <h5 class="card-header"><?php if( $title ) echo $title; ?></h5>
         <div class="card-body">
-          <ul class="pl-3">
+          <ul class="list-group list-group-flush">
           <?php foreach ( $r->posts as $recent_post ) : ?>
             <?php
             $post_title = get_the_title( $recent_post->ID );
             $post_author = get_user_by( 'ID', $recent_post->post_author );
             $title      = ( ! empty( $post_title ) ) ? $post_title : __( '(no title)' );
             ?>
-            <li>
+            <li class="list-group-item">
               <a href="<?php the_permalink( $recent_post->ID ); ?>"><?= $post_author->display_name . ' - ' . $title; ?></a>
               <?php if ( $show_date ) : ?>
                 <span class="post-date"><?php echo get_the_date( '', $recent_post->ID ); ?></span>
