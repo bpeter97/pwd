@@ -64,6 +64,9 @@ $featured_query = new WP_Query( $featured_args );
           bottom: 0;
         }
       }
+      #blogHomeHeader .wp-socializer {
+        display: none;
+      }
     </style>
 
 	<section id="blogHomeHeader">

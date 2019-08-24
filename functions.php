@@ -56,3 +56,11 @@ function wpsites_change_comment_form_submit_label($arg) {
         return $arg;
 }
 add_filter('comment_form_defaults', 'wpsites_change_comment_form_submit_label');
+
+// Default Gravatar
+add_filter( 'avatar_defaults', 'new_gravatar' );
+function new_gravatar ($avatar_defaults) {
+$myavatar = 'https://peterwebdevelopment.com/wp-content/uploads/2019/08/PWD.png';
+$avatar_defaults[$myavatar] = "Default Gravatar";
+return $avatar_defaults;
+}
