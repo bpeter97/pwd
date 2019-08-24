@@ -6,6 +6,8 @@
   <h1><?php the_title(); ?></h1>
   <p class="pb-0 mb-0 d-none d-md-block"><?php the_date(); ?></p>
   <p class="pt-0 mt-0 d-none d-md-block"><?php the_author(); ?></p>
-  <?php the_content(); ?>
+  <?php if ( has_excerpt() ): ?>
+  <?php the_excerpt(); ?>
+  <?php endif; ?>
   <p><a class="btn btn-primary" href="<?= get_permalink(); ?>" role="button">Check Out More</a></p>
 </div>

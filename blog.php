@@ -67,20 +67,20 @@ $featured_query = new WP_Query( $featured_args );
     </style>
 
 	<section id="blogHomeHeader">
-    <div id="blogFeaturedCarousel" class="carousel slide" data-ride="carousel">
+    <div id="blogFeaturedCarousel" class="carousel slide carousel-fade" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#blogFeaturedCarousel" data-slide-to="0" class="d-none d-md-block active"></li>
         <li data-target="#blogFeaturedCarousel" data-slide-to="1" class="d-none d-md-block"></li>
         <li data-target="#blogFeaturedCarousel" data-slide-to="2" class="d-none d-md-block"></li>
       </ol>
-      <div class="carousel-inner">
+      <div class="carousel-inner" style="background-color: black;">
         
         <?php 
           
           if ( $featured_query->have_posts() ) : $featured_index = 0; while ( $featured_query->have_posts() ): $featured_query->the_post(); ?>
 
             <?php if ( $featured_index == 0 ) : ?>
-            <div class="carousel-item active" style="background-color: black;">
+            <div class="carousel-item active">
             <?php else : ?>
             <div class="carousel-item">
             <?php endif;
