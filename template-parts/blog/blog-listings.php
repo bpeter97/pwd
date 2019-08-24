@@ -33,12 +33,6 @@
       </div>
       <div class="col-6 text-right">
         <span class="sharables">
-          <a href="#">
-            <i class="fas fa-share-alt pr-1"></i>
-            Share
-          </a>
-        </span>
-        <span class="sharables">
           <i class="fas fa-comments"></i>
           <?= comments_number() ?>
         </span>
