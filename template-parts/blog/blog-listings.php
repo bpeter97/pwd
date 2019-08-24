@@ -39,10 +39,6 @@
           </a>
         </span>
         <span class="sharables">
-          <i class="fas fa-heart"></i>
-          03*
-        </span>
-        <span class="sharables">
           <i class="fas fa-comments"></i>
           <?= comments_number() ?>
         </span>
