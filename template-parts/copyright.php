@@ -6,9 +6,9 @@
 						<div class="card-body">
 							<h5 class="card-title text-center">Links</h5>
 							<ul class="list">
-								<li class="list-item"><a href="./about">About</a></li>
-								<li class="list-item"><a href="./contact">Contact</a></li>
-								<li class="list-item">Blog</li>
+								<li class="list-item"><a href="<?= home_url('/').'about'; ?>">About</a></li>
+								<li class="list-item"><a href="<?= home_url('/').'contact'; ?>">Contact</a></li>
+								<li class="list-item"><a href="<?= home_url('/').'blog'; ?>">Blog</a></li>
 								<li class="list-item"><a href="./#services">Services</a></li>
 							</ul>
 						</div>
@@ -32,13 +32,13 @@
 						<div class="card-body">
 							<h5 class="card-title text-center">Services</h5>
 							<ul class="list">
-								<li class="list-item">Web Hosting</li>
-								<li class="list-item">Website Design</li>
-								<li class="list-item">Website Maintenance</li>
-								<li class="list-item">Search Engine Optimization</li>
-								<li class="list-item">Content Management</li>
-								<li class="list-item">Custom Web Development</li>
-								<li class="list-item">E-Commerce</li>
+								<li class="list-item"><a href="<?= home_url('/').'hosting'; ?>">Web Hosting</a></li>
+								<li class="list-item"><a href="<?= home_url('/').'desgin'; ?>">Website Design</a></li>
+								<li class="list-item"><a href="<?= home_url('/').'maintenance'; ?>">Website Maintenance</a></li>
+								<li class="list-item"><a href="<?= home_url('/').'seo'; ?>">Search Engine Optimization</a></li>
+								<li class="list-item"><a href="<?= home_url('/').'content-management'; ?>">Content Management</a></li>
+								<li class="list-item"><a href="<?= home_url('/').'custom'; ?>">Custom Web Development</a></li>
+								<li class="list-item"><a href="<?= home_url('/').'ecommerce'; ?>">E-Commerce</a></li>
 							</ul>
 						</div>
 					</div>
@@ -48,10 +48,10 @@
 						<div class="card-body">
 							<h5 class="card-title text-center">Peter Web Development</h5>
 							<ul class="list">
-								<li class="list-item">Some PO Box?</li>
+								<!-- <li class="list-item">Some PO Box?</li> -->
 								<li class="list-item">Visalia, C.A., U.S.A.</li>
 								<li class="list-item">Phone: 555-555-5555</li>
-								<li class="list-item">Email: info@peterwebdevelopment.com</li>
+								<li class="list-item"><a href="mailto:admin@peterwebdevelopment.com">Email Us</a></li>
 							</ul>
 						</div>
 					</div>

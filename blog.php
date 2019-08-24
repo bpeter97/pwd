@@ -67,11 +67,11 @@ $featured_query = new WP_Query( $featured_args );
     </style>
 
 	<section id="blogHomeHeader">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div id="blogFeaturedCarousel" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="d-none d-md-block active"></li>
-        <li data-target="#myCarousel" data-slide-to="1" class="d-none d-md-block"></li>
-        <li data-target="#myCarousel" data-slide-to="2" class="d-none d-md-block"></li>
+        <li data-target="#blogFeaturedCarousel" data-slide-to="0" class="d-none d-md-block active"></li>
+        <li data-target="#blogFeaturedCarousel" data-slide-to="1" class="d-none d-md-block"></li>
+        <li data-target="#blogFeaturedCarousel" data-slide-to="2" class="d-none d-md-block"></li>
       </ol>
       <div class="carousel-inner">
         
@@ -92,11 +92,11 @@ $featured_query = new WP_Query( $featured_args );
         ?>
 
       </div>
-      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <a class="carousel-control-prev" href="#blogFeaturedCarousel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
-      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <a class="carousel-control-next" href="#blogFeaturedCarousel" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>

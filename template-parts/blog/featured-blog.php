@@ -7,5 +7,5 @@
   <p class="pb-0 mb-0 d-none d-md-block"><?php the_date(); ?></p>
   <p class="pt-0 mt-0 d-none d-md-block"><?php the_author(); ?></p>
   <?php the_content(); ?>
-  <p><a class="btn btn-primary" href="#" role="button">Sign up today</a></p>
+  <p><a class="btn btn-primary" href="<?= get_permalink(); ?>" role="button">Check Out More</a></p>
 </div>
