@@ -27,7 +27,7 @@
 
     <ul class="list-group list-group-flush">
         <?php foreach( $categories as $category ):
-         if( $category->slug !== 'feature' && $category->slug !== 'Featured' ) {
+         if( $category->name !== 'Featured' ) {
             $category_link = sprintf( 
               '<a href="%1$s" alt="%2$s">%3$s</a>',
               esc_url( home_url( '/search/?s=' ) . $category->name ),
