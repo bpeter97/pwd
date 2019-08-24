@@ -13,6 +13,10 @@ Template Name: About Page
 			background-repeat: no-repeat;
 			background-size: cover;
 		}
+
+		#aboutUs .wp-socializer {
+			display: none;
+		}
 	</style>
 
 	<section id="headerSection" class="">
