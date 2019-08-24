@@ -43,3 +43,16 @@ add_action('after_setup_theme', 'pwd_theme_setup');
 //     'after_widget' => '</div>'
 //   ));
 // }
+
+add_filter( 'comment_form_default_fields', 'tu_comment_form_hide_cookies_consent' );
+function tu_comment_form_hide_cookies_consent( $fields ) {
+	unset( $fields['cookies'] );
+	return $fields;
+}
+
+function wpsites_change_comment_form_submit_label($arg) {
+  $arg['label_submit'] = 'Submit';
+  $arg['submit_button'] = '<input name="%1$s" type="submit" id="%2$s" class="%3$s btn btn-primary" value="%4$s" />';
+        return $arg;
+}
+add_filter('comment_form_defaults', 'wpsites_change_comment_form_submit_label');

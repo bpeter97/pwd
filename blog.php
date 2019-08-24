@@ -3,7 +3,21 @@
 Template Name: Blog Home Page
 */
 ?>
+<?php 
 
+$args = array(
+  'posts_per_page'   => 10,
+  'post_type'        => 'post',
+);
+$main_query = new WP_Query( $args );
+
+$featured_args = array (
+  'category_name'    => 'feature',
+  'showposts'        => 3
+);
+$featured_query = new WP_Query( $featured_args );
+
+?>
 
 <?php get_header(); ?>
 	<style>
@@ -24,8 +38,6 @@ Template Name: Blog Home Page
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
-        height: 250px;
-        object-fit: cover;
       }
 
       @media (min-width: 768px) {
@@ -63,8 +75,7 @@ Template Name: Blog Home Page
       <div class="carousel-inner">
         
         <?php 
-          $featured_query = new WP_Query('category_name=feature&showposts=3');
-
+          
           if ( $featured_query->have_posts() ) : $featured_index = 0; while ( $featured_query->have_posts() ): $featured_query->the_post(); ?>
 
             <?php if ( $featured_index == 0 ) : ?>
@@ -96,11 +107,10 @@ Template Name: Blog Home Page
       <div class="row">
         <div class="col-md-8">
         <?php 
-          $listing_query = new WP_Query('category_name=feature&showposts=3');
 
-          if ( $listing_query->have_posts() ) : $featured_index = 0; while ( $listing_query->have_posts() ): $listing_query->the_post();
+          if ( $main_query->have_posts() ) : $featured_index = 0; while ( $main_query->have_posts() ): $main_query->the_post();
 
-            get_template_part('template-parts/blog/blog-listings', $listing_query->get_post_format() );
+            get_template_part('template-parts/blog/blog-listings', $main_query->get_post_format() );
 
           endwhile; endif;
         ?>
