@@ -28,7 +28,7 @@
         <?php foreach( $categories as $category ):
             $category_link = sprintf( 
               '<a href="%1$s" alt="%2$s">%3$s</a>',
-              esc_url( get_category_link( $category->term_id ) ),
+              esc_url( home_url( '/search/?s=' ) . $category->name ),
               esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ),
               esc_html( $category->name )
           );

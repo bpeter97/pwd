@@ -12,7 +12,7 @@ $args = array(
 $main_query = new WP_Query( $args );
 
 $featured_args = array (
-  'category_name'    => 'feature',
+  'category_name'    => 'Featured',
   'showposts'        => 3
 );
 $featured_query = new WP_Query( $featured_args );
