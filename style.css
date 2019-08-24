@@ -653,10 +653,6 @@ body {
 }
 
 #servers {
-  /* background: -webkit-linear-gradient(#d3d3d3, white, #d3d3d3);
-	background: -o-linear-gradient(#d3d3d3, white, #d3d3d3);
-	background: -moz-linear-gradient(#d3d3d3, white, #d3d3d3);
-	background: linear-gradient(#d3d3d3, white, #d3d3d3); */
   background: rgba(247, 247, 247, 1);
   background: -moz-linear-gradient(
     top,

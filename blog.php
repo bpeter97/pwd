@@ -118,11 +118,6 @@ $featured_query = new WP_Query( $featured_args );
 
           endwhile; endif;
         ?>
-          <?php 
-            // for ($i=0; $i < 3; $i++) { 
-            //   get_template_part('template-parts/blog/blog-listings');
-            // }
-          ?>
         </div>
         <div class="col-md-4">
           <?php get_template_part('template-parts/blog/sidebar'); ?>

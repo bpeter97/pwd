@@ -50,7 +50,9 @@
   </div>
   <div class="card-body">
     <h2 class="card-title"><?php the_title(); ?></h2>
-    <?php the_content(); ?>
+    <?php if ( has_excerpt() ): ?>
+    <?php the_excerpt(); ?>
+    <?php endif; ?>
     <a href="<?= get_permalink(); ?>" class="btn read-more text-uppercase mt-3">Read More &rarr;</a>
   </div>
 </div>

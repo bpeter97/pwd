@@ -33,13 +33,10 @@ $total_results = $wp_query->found_posts;
       }
     </style>
 
-	<section id="blogHomeHeader" class="">
+	<section id="blogListings" class="pt-5 mt-3">
     <div class="container pt-5">
         <div class="row">
           <div class="col-md-8">
-            <h1><?php printf( __( 'Search Results for: %s', 'shape' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-            <h1><?php printf( __( '# of Results: %s', 'shape' ), '<span>' . $total_results . '</span>' ); ?></h1>
-
             <?php 
 
             if( have_posts() ):
@@ -59,8 +56,6 @@ $total_results = $wp_query->found_posts;
         </div>
       </div>
     </section>
-  
-  <?php get_template_part('template-parts/servers'); ?>
 
   <?php get_template_part('template-parts/services'); ?>
   
