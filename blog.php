@@ -38,6 +38,7 @@ $featured_query = new WP_Query( $featured_args );
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
+        object-fit: cover;
       }
 
       @media (min-width: 768px) {
@@ -79,7 +80,7 @@ $featured_query = new WP_Query( $featured_args );
           if ( $featured_query->have_posts() ) : $featured_index = 0; while ( $featured_query->have_posts() ): $featured_query->the_post(); ?>
 
             <?php if ( $featured_index == 0 ) : ?>
-            <div class="carousel-item active">
+            <div class="carousel-item active" style="background-color: black;">
             <?php else : ?>
             <div class="carousel-item">
             <?php endif;
