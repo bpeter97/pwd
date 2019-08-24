@@ -41,6 +41,7 @@ body {
   height: 100%;
   z-index: 9999;
   background: url(./assets/imgs/spinner.gif) center no-repeat #fff;
+  scale: 3;
 }
 
 @media (max-width: 767px) {
