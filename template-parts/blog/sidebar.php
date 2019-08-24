@@ -18,6 +18,7 @@
     <?php
 
       $categories = get_categories( array(
+          'exclude' => 2,
           'orderby' => 'name',
           'order'   => 'ASC'
       ) );
@@ -26,6 +27,7 @@
 
     <ul class="list-group list-group-flush">
         <?php foreach( $categories as $category ):
+         if( $category->slug !== 'feature' && $category->slug !== 'Featured' ) {
             $category_link = sprintf( 
               '<a href="%1$s" alt="%2$s">%3$s</a>',
               esc_url( home_url( '/search/?s=' ) . $category->name ),
@@ -33,10 +35,13 @@
               esc_html( $category->name )
           );
 
+          $cat_name = sprintf( esc_html__( '%s', 'textdomain' ), $category_link );
+
+          echo '<li class="list-group-item">';
+          echo $cat_name;
+          echo '</li>';
+        }
         ?>
-      <li class="list-group-item">
-        <?= sprintf( esc_html__( '%s', 'textdomain' ), $category_link ); ?>
-      </li>
         <?php endforeach; ?>
     </ul>
   </div>
