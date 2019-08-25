@@ -4,7 +4,9 @@
     padding-left: 2rem;
     padding-top: 2rem;
   }
-
+  .feature.almost-last {
+    padding-bottom: 2rem;
+  }
   .feature.last {
     padding-bottom: 2rem;
   }
@@ -75,7 +77,7 @@
         <i class="far fa-trash-alt"></i>
         <span>Spam Removal</span>
       </div>
-      <div class="col-sm-4 feature last">
+      <div class="col-sm-4 feature almost-last">
         <i class="far fa-images"></i>
         <span>Check Images</span>
       </div>

@@ -585,5 +585,51 @@ function pdw_customize_register( $wp_customize ) {
         'priority' => 2
       ));
   // ************************************************************************
+
+  // ********** 10. Custom Page **********
+    $wp_customize->add_section('custom_page', array(
+      'title'       => __('Custom Page', 'peterwebdev'),
+      'description' => __('Options for the Custom Page', 'peterwebdev'),
+      'priority'    => 120
+    ));
+
+    // ********** 10.1 Custom Page Header Image **********
+      $wp_customize->add_setting('custom_page_header_image', array(
+        'default' => get_bloginfo('template_directory').'/assets/imgs/headers/cm.jpg',
+        'type'    => 'theme_mod'
+      ));
+      $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'custom_page_header_image', array(
+        'label'    => __('Header Image', 'peterwebdev'),
+        'section'  => 'custom_page',
+        'settings' => 'custom_page_header_image',
+        'priority' => 1
+      )));
+
+    // ********** 10.2 Custom Page Text **********
+      $wp_customize->add_setting('custom_page_text', array(
+        'default' => 'Custom Page Text: Edit this in the customizer.',
+        'type'    => 'theme_mod'
+      ));
+      $wp_customize->add_control('custom_page_text', array(
+        'type'     => 'textarea',
+        'label'    => __('Custom Page Text', 'peterwebdev'),
+        'section'  => 'custom_page',
+        'settings' => 'custom_page_text',
+        'priority' => 2
+      ));
+
+    // ********** 10.3 Custom Page Text **********
+      $wp_customize->add_setting('custom_statement_message', array(
+        'default' => 'Custom Statement Message: Edit this in the customizer.',
+        'type'    => 'theme_mod'
+      ));
+      $wp_customize->add_control('custom_statement_message', array(
+        'type'     => 'textarea',
+        'label'    => __('Custom Statement Message', 'peterwebdev'),
+        'section'  => 'custom_page',
+        'settings' => 'custom_statement_message',
+        'priority' => 2
+      ));
+  // ************************************************************************
 }
 add_action( 'customize_register', 'pdw_customize_register' );

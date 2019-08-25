@@ -4,7 +4,9 @@
     padding-left: 2rem;
     padding-top: 2rem;
   }
-
+  .feature.almost-last {
+    padding-bottom: 2rem;
+  }
   .feature.last {
     padding-bottom: 2rem;
   }
@@ -49,11 +51,11 @@
       <i class="fas fa-window-restore"></i>
       <span>Unlimited Subdomains</span>
     </div>
-    <div class="col-sm-4 feature last">
+    <div class="col-sm-4 feature almost-last">
       <i class="fas fa-map-marker-alt"></i>
       <span>Free Dedicated IP</span>
     </div>
-    <div class="col-sm-4 feature last">
+    <div class="col-sm-4 feature almost-last">
       <i class="fab fa-weebly"></i>
       <span>Weebly Site Builder</span>
     </div>

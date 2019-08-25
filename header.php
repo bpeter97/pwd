@@ -24,6 +24,7 @@
 	<script>
 		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 			document.getElementById("technologies").style.display = "none";
+			document.getElementsByClassName("almost-last").style.paddingBottom = "0px";
 		}
 	</script>
 

@@ -22,7 +22,7 @@
 		<div class="d-flex flex-row">
 			<div class="col text-center">
 				<span class="h5">
-						<?= get_theme_mod('content_management_statement_message', 'You run your business, we will run your website! Do you want a website, but do not want the hastle of making changes on your website yourself? Then this may be an option for you! We will change images, alter information, redesign pages, create new pages, all for $50.00 per hour. Check out what is all included in content management below!'); ?>
+						<?= get_theme_mod('custom_statement_message', 'We do not only do web development. We also develop web applications. This can be web portals, where your business conducts business online without your customers being able to see. This can be done through a number of different languages or different frameworks. If you are interested in something a little bit more than just a website, please contact us! Pricing is done on a project by project basis.'); ?>
 					</span>
 			</div>
 		</div>
@@ -33,32 +33,44 @@
   <div class="container pt-5 pb-4">
     <div class="row">
       <div class="col-12 text-center">
-        <h2 class="feature-title">Content Management</h2>
-        <h2 class="feature-title">$50.00 Per Hour</h2>
+        <h2 class="feature-title">Custom Development</h2>
+        <h2 class="feature-title">Priced Per Project</h2>
       </div>
     </div>
   </div>
   <div class="container pb-5">
     <div class="row text-left feature-box">
       <div class="col-sm-4 feature first">
-        <i class="far fa-times-circle"></i>
-        <span>Problem Solving</span>
+        <i class="fas fa-fire"></i>
+        <span>PHP CodeIgniter</span>
       </div>
       <div class="col-sm-4 feature">
-        <i class="fab fa-megaport"></i>
-        <span>Design Planning</span>
+        <i class="fab fa-react"></i>
+        <span>Express / React</span>
       </div>
       <div class="col-sm-4 feature">
-        <i class="fas fa-code"></i>
-        <span>Coding Solutions</span>
+        <i class="fab fa-laravel"></i>
+        <span>Laravel</span>
+      </div>
+      <div class="col-sm-4 feature">
+        <i class="fab fa-drupal"></i>
+        <span>Drupal</span>
+      </div>
+      <div class="col-sm-4 feature">
+        <i class="fab fa-joomla"></i>
+        <span>Joomla</span>
+      </div>
+      <div class="col-sm-4 feature">
+        <i class="fab fa-node-js"></i>
+        <span>MERN Stack</span>
       </div>
       <div class="col-sm-4 feature almost-last">
-        <i class="far fa-edit"></i>
-        <span>Small Adjustments</span>
+        <i class="fab fa-js-square"></i>
+        <span>JavaScript</span>
       </div>
       <div class="col-sm-4 feature almost-last">
-        <i class="fas fa-tags"></i>
-        <span>Content Creation</span>
+        <i class="fab fa-php"></i>
+        <span>PHP</span>
       </div>
       <div class="col-sm-4 feature last">
         <i class="far fa-plus-square"></i>

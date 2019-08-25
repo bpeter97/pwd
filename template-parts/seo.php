@@ -4,7 +4,9 @@
     padding-left: 2rem;
     padding-top: 2rem;
   }
-
+  .feature.almost-last {
+    padding-bottom: 2rem;
+  }
   .feature.last {
     padding-bottom: 2rem;
   }
@@ -75,11 +77,11 @@
         <i class="fas fa-rss-square"></i>
         <span>Meta Descriptions</span>
       </div>
-      <div class="col-sm-4 feature last">
+      <div class="col-sm-4 feature almost-last">
         <i class="fas fa-link"></i>
         <span>Internal Linking</span>
       </div>
-      <div class="col-sm-4 feature last">
+      <div class="col-sm-4 feature almost-last">
         <i class="fas fa-share-square"></i>
         <span>Sitemap Submission</span>
       </div>
