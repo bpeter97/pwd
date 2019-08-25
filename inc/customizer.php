@@ -36,6 +36,14 @@
 *     6.1 hosting_header_image
 *     6.2 hosting_header_image
 *     6.3 hosting_header_text
+*   7. Design
+*     7.1 design_header_image
+*     7.2 design_header_image
+*     7.3 design_header_text
+*   8. Maintenance
+*     7.1 maintenance_header_image
+*     7.2 maintenance_header_image
+*     7.3 maintenance_header_text
 */
 
 function pdw_customize_register( $wp_customize ) {
@@ -374,10 +382,10 @@ function pdw_customize_register( $wp_customize ) {
     $wp_customize->add_section('hosting_page', array(
       'title'       => __('Hosting Page', 'peterwebdev'),
       'description' => __('Options for the Hosting Pace', 'peterwebdev'),
-      'priority'    => 114
+      'priority'    => 116
     ));
 
-    // ********** 4.1 Hosting Page Header Image **********
+    // ********** 6.1 Hosting Page Header Image **********
       $wp_customize->add_setting('hosting_page_header_image', array(
         'default' => get_bloginfo('template_directory').'/assets/imgs/headers/servers.jpg',
         'type'    => 'theme_mod'
@@ -389,7 +397,7 @@ function pdw_customize_register( $wp_customize ) {
         'priority' => 1
       )));
 
-    // ********** 4.2 Hosting Page Text **********
+    // ********** 6.2 Hosting Page Text **********
       $wp_customize->add_setting('hosting_page_text', array(
         'default' => 'Hosting Page Text: Edit this in the customizer.',
         'type'    => 'theme_mod'
@@ -399,6 +407,85 @@ function pdw_customize_register( $wp_customize ) {
         'label'    => __('Hosting Page Text', 'peterwebdev'),
         'section'  => 'hosting_page',
         'settings' => 'hosting_page_text',
+        'priority' => 2
+      ));
+  // ************************************************************************
+
+  // ********** 7. Design Page **********
+    $wp_customize->add_section('design_page', array(
+      'title'       => __('design Page', 'peterwebdev'),
+      'description' => __('Options for the Design Page', 'peterwebdev'),
+      'priority'    => 117
+    ));
+
+    // ********** 7.1 Design Page Header Image **********
+      $wp_customize->add_setting('design_page_header_image', array(
+        'default' => get_bloginfo('template_directory').'/assets/imgs/headers/servers.jpg',
+        'type'    => 'theme_mod'
+      ));
+      $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'design_page_header_image', array(
+        'label'    => __('Header Image', 'peterwebdev'),
+        'section'  => 'design_page',
+        'settings' => 'design_page_header_image',
+        'priority' => 1
+      )));
+
+    // ********** 7.2 Design Page Text **********
+      $wp_customize->add_setting('design_page_text', array(
+        'default' => 'Design Page Text: Edit this in the customizer.',
+        'type'    => 'theme_mod'
+      ));
+      $wp_customize->add_control('design_page_text', array(
+        'type'     => 'textarea',
+        'label'    => __('Design Page Text', 'peterwebdev'),
+        'section'  => 'design_page',
+        'settings' => 'design_page_text',
+        'priority' => 2
+      ));
+  // ************************************************************************
+
+  // ********** 8. Maintenance Page **********
+    $wp_customize->add_section('maintenance_page', array(
+      'title'       => __('Maintenance Page', 'peterwebdev'),
+      'description' => __('Options for the maintenance Page', 'peterwebdev'),
+      'priority'    => 118
+    ));
+
+    // ********** 8.1 Maintenance Page Header Image **********
+      $wp_customize->add_setting('maintenance_page_header_image', array(
+        'default' => get_bloginfo('template_directory').'/assets/imgs/headers/servers.jpg',
+        'type'    => 'theme_mod'
+      ));
+      $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'maintenance_page_header_image', array(
+        'label'    => __('Header Image', 'peterwebdev'),
+        'section'  => 'maintenance_page',
+        'settings' => 'maintenance_page_header_image',
+        'priority' => 1
+      )));
+
+    // ********** 8.2 maintenance Page Text **********
+      $wp_customize->add_setting('maintenance_page_text', array(
+        'default' => 'Maintenance Page Text: Edit this in the customizer.',
+        'type'    => 'theme_mod'
+      ));
+      $wp_customize->add_control('maintenance_page_text', array(
+        'type'     => 'textarea',
+        'label'    => __('Maintenance Page Text', 'peterwebdev'),
+        'section'  => 'maintenance_page',
+        'settings' => 'maintenance_page_text',
+        'priority' => 2
+      ));
+
+    // ********** 8.3 maintenance Page Text **********
+      $wp_customize->add_setting('maintenance_statement_message', array(
+        'default' => 'Maintenance  Statement Message: Edit this in the customizer.',
+        'type'    => 'theme_mod'
+      ));
+      $wp_customize->add_control('maintenance_statement_message', array(
+        'type'     => 'textarea',
+        'label'    => __('Maintenance Statement Message', 'peterwebdev'),
+        'section'  => 'maintenance_page',
+        'settings' => 'maintenance_statement_message',
         'priority' => 2
       ));
   // ************************************************************************

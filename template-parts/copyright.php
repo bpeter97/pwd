@@ -32,13 +32,14 @@
 						<div class="card-body">
 							<h5 class="card-title text-center">Services</h5>
 							<ul class="list">
-								<li class="list-item"><a href="<?= home_url('/').'hosting'; ?>">Web Hosting</a></li>
-								<li class="list-item"><a href="<?= home_url('/').'desgin'; ?>">Website Design</a></li>
-								<li class="list-item"><a href="<?= home_url('/').'maintenance'; ?>">Website Maintenance</a></li>
-								<li class="list-item"><a href="<?= home_url('/').'seo'; ?>">Search Engine Optimization</a></li>
-								<li class="list-item"><a href="<?= home_url('/').'content-management'; ?>">Content Management</a></li>
-								<li class="list-item"><a href="<?= home_url('/').'custom'; ?>">Custom Web Development</a></li>
-								<li class="list-item"><a href="<?= home_url('/').'ecommerce'; ?>">E-Commerce</a></li>
+								<li class="list-item"><a href="<?= home_url('/').'hosting/'; ?>">Web Hosting</a></li>
+								<li class="list-item"><a href="<?= home_url('/').'design/'; ?>">Website Design</a></li>
+								<li class="list-item"><a href="<?= home_url('/').'maintenance/'; ?>">Website Maintenance</a></li>
+								<li class="list-item"><a href="<?= home_url('/').'seo/'; ?>">Search Engine Optimization</a></li>
+								<li class="list-item"><a href="<?= home_url('/').'content-management/'; ?>">Content Management</a></li>
+								<li class="list-item"><a href="<?= home_url('/').'custom/'; ?>">Custom Web Development</a></li>
+								<li class="list-item"><a href="<?= home_url('/').'ecommerce/'; ?>">E-Commerce</a></li>
+								<li class="list-item"><a href="<?= home_url('/').'emergency/'; ?>">Emergency Help</a></li>
 							</ul>
 						</div>
 					</div>
