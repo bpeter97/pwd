@@ -25,7 +25,7 @@ Template Name: SEO Page
 								<span id="headerTopText" class="h1 text-uppercase">
                   <?= get_theme_mod('seo_page_header_title', 'Search Engine Optimization'); ?>
 								</span>
-								<p class="pt-2"><?= get_theme_mod('seo_page_message', 'Your website is only a speck in an entire web of websites. Inorder to be seen, you need to be relevant, easy to understand, and simple to find.'); ?></p>
+								<p class="pt-2"><?= get_theme_mod('seo_page_text', 'Your website is only a speck in an entire web of websites. Inorder to be seen, you need to be relevant, easy to understand, and simple to find.'); ?></p>
 								<br />
 								<button type="button" onclick="window.location.href = './#contact';" class="btn btn-primary mt-2 header-button ml-0">
                   Contact Us

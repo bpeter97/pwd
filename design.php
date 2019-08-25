@@ -25,7 +25,7 @@ Template Name: Design Page
 								<span id="headerTopText" class="h1 text-uppercase">
                   <?= get_theme_mod('design_page_header_title', 'Web Design'); ?>
 								</span>
-								<p class="pt-2"><?= get_theme_mod('design_page_message', 'Edit the "Design Page Header Text" in the customizer.'); ?></p>
+								<p class="pt-2"><?= get_theme_mod('design_page_text', 'Web design is not just about what you see, but how the website works. Let us design your digital footprint to grow business! '); ?></p>
 								<br />
 								<button type="button" onclick="window.location.href = './#contact';" class="btn btn-primary mt-2 header-button ml-0">
                   Contact Us

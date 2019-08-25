@@ -25,7 +25,7 @@ Template Name: Maintenance Page
 								<span id="headerTopText" class="h1 text-uppercase">
                   <?= get_theme_mod('maintenance_page_header_title', 'Web Maintenance'); ?>
 								</span>
-								<p class="pt-2"><?= get_theme_mod('maintenance_page_message', 'Do yourself and your business a favor by allowing us to stay on top of your website. This will repay you with simple ease of mind.'); ?></p>
+								<p class="pt-2"><?= get_theme_mod('maintenance_page_text', 'Do yourself and your business a favor by allowing us to stay on top of your website. This will repay you with simple ease of mind.'); ?></p>
 								<br />
 								<button type="button" onclick="window.location.href = './#contact';" class="btn btn-primary mt-2 header-button ml-0">
                   Contact Us

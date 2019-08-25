@@ -25,7 +25,7 @@ Template Name: Content Management Page
 								<span id="headerTopText" class="h1 text-uppercase">
                   <?= get_theme_mod('content_management_page_header_title', 'Content Management'); ?>
 								</span>
-								<p class="pt-2"><?= get_theme_mod('content_management_page_message', 'Look and feel is not everything! There must be something on your website for your visitor to engage with. That is content, it needs to be relevant, SEO friendly, and of course attracting the right customers!'); ?></p>
+								<p class="pt-2"><?= get_theme_mod('content_management_page_text', 'Look and feel is not everything! There must be something on your website for your visitor to engage with. That is content, it needs to be relevant, SEO friendly, and of course attracting the right customers!'); ?></p>
 								<br />
 								<button type="button" onclick="window.location.href = './#contact';" class="btn btn-primary mt-2 header-button ml-0">
                   Contact Us
