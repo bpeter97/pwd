@@ -539,5 +539,51 @@ function pdw_customize_register( $wp_customize ) {
         'priority' => 2
       ));
   // ************************************************************************
+
+  // ********** 9. Content Management Page **********
+    $wp_customize->add_section('content_management_page', array(
+      'title'       => __('Content Management Page', 'peterwebdev'),
+      'description' => __('Options for the Content Management Page', 'peterwebdev'),
+      'priority'    => 119
+    ));
+
+    // ********** 9.1 Content Management Page Header Image **********
+      $wp_customize->add_setting('content_management_page_header_image', array(
+        'default' => get_bloginfo('template_directory').'/assets/imgs/headers/cm.jpg',
+        'type'    => 'theme_mod'
+      ));
+      $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'content_management_page_header_image', array(
+        'label'    => __('Header Image', 'peterwebdev'),
+        'section'  => 'content_management_page',
+        'settings' => 'content_management_page_header_image',
+        'priority' => 1
+      )));
+
+    // ********** 9.2 Content Management Page Text **********
+      $wp_customize->add_setting('content_management_page_text', array(
+        'default' => 'Content Management Page Text: Edit this in the customizer.',
+        'type'    => 'theme_mod'
+      ));
+      $wp_customize->add_control('content_management_page_text', array(
+        'type'     => 'textarea',
+        'label'    => __('Content Management Page Text', 'peterwebdev'),
+        'section'  => 'content_management_page',
+        'settings' => 'content_management_page_text',
+        'priority' => 2
+      ));
+
+    // ********** 9.3 Content Management Page Text **********
+      $wp_customize->add_setting('content_management_statement_message', array(
+        'default' => 'Content Management Statement Message: Edit this in the customizer.',
+        'type'    => 'theme_mod'
+      ));
+      $wp_customize->add_control('content_management_statement_message', array(
+        'type'     => 'textarea',
+        'label'    => __('Content Management Statement Message', 'peterwebdev'),
+        'section'  => 'content_management_page',
+        'settings' => 'content_management_statement_message',
+        'priority' => 2
+      ));
+  // ************************************************************************
 }
 add_action( 'customize_register', 'pdw_customize_register' );
