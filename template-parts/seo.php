@@ -4,8 +4,10 @@
     padding-left: 2rem;
     padding-top: 2rem;
   }
-  .feature.almost-last {
-    padding-bottom: 2rem;
+  @media (min-width: 576px) {
+    .feature.almost-last {
+      padding-bottom: 2rem;
+    }
   }
   .feature.last {
     padding-bottom: 2rem;
@@ -13,7 +15,7 @@
   i {
     font-size: 1.5rem;
     padding-right: .5rem;
-  }
+  }}
 
 </style>
 
