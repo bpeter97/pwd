@@ -48,6 +48,13 @@
 *     9.1 seo_header_image
 *     9.2 seo_header_image
 *     9.3 seo_page_message
+*   10. Custom
+*     10.1 custom_header_image
+*     10.2 custom_header_image
+*     10.3 custom_page_message
+*   11. Emergency Help
+*     11.1 emergenncy_help_page_header_image
+*     11.2 emergenncy_help_page_header_image
 */
 
 function pdw_customize_register( $wp_customize ) {
@@ -628,6 +635,85 @@ function pdw_customize_register( $wp_customize ) {
         'label'    => __('Custom Statement Message', 'peterwebdev'),
         'section'  => 'custom_page',
         'settings' => 'custom_statement_message',
+        'priority' => 2
+      ));
+  // ************************************************************************
+
+  // ********** 11. Emergency Page **********
+    $wp_customize->add_section('emergency_help_page', array(
+      'title'       => __('Emergency Page', 'peterwebdev'),
+      'description' => __('Options for the Emergency Page', 'peterwebdev'),
+      'priority'    => 120
+    ));
+
+    // ********** 11.1 Emergency Page Header Image **********
+      $wp_customize->add_setting('emergency_help_page_header_image', array(
+        'default' => get_bloginfo('template_directory').'/assets/imgs/headers/cm.jpg',
+        'type'    => 'theme_mod'
+      ));
+      $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'emergency_help_page_header_image', array(
+        'label'    => __('Header Image', 'peterwebdev'),
+        'section'  => 'emergency_help_page',
+        'settings' => 'emergency_help_page_header_image',
+        'priority' => 1
+      )));
+
+    // ********** 11.2 Emergency Page Text **********
+      $wp_customize->add_setting('emergency_help_page_text', array(
+        'default' => 'Emergency Page Text: Edit this in the customizer.',
+        'type'    => 'theme_mod'
+      ));
+      $wp_customize->add_control('emergency_help_page_text', array(
+        'type'     => 'textarea',
+        'label'    => __('Emergency Page Text', 'peterwebdev'),
+        'section'  => 'emergency_help_page',
+        'settings' => 'emergency_help_page_text',
+        'priority' => 2
+      ));
+  // ************************************************************************
+
+  // ********** 12. Emergency Page **********
+    $wp_customize->add_section('ecommerce_page', array(
+      'title'       => __('Emergency Page', 'peterwebdev'),
+      'description' => __('Options for the Emergency Page', 'peterwebdev'),
+      'priority'    => 120
+    ));
+
+    // ********** 12.1 Emergency Page Header Image **********
+      $wp_customize->add_setting('ecommerce_page_header_image', array(
+        'default' => get_bloginfo('template_directory').'/assets/imgs/headers/cm.jpg',
+        'type'    => 'theme_mod'
+      ));
+      $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'ecommerce_page_header_image', array(
+        'label'    => __('Header Image', 'peterwebdev'),
+        'section'  => 'ecommerce_page',
+        'settings' => 'ecommerce_page_header_image',
+        'priority' => 1
+      )));
+
+    // ********** 12.2 Emergency Page Title **********
+      $wp_customize->add_setting('ecommerce_page_header_title', array(
+        'default' => 'Emergency Page Text: Edit this in the customizer.',
+        'type'    => 'theme_mod'
+      ));
+      $wp_customize->add_control('ecommerce_page_header_title', array(
+        'type'     => 'textarea',
+        'label'    => __('Emergency Page Text', 'peterwebdev'),
+        'section'  => 'ecommerce_page',
+        'settings' => 'ecommerce_page_header_title',
+        'priority' => 2
+      ));
+      
+    // ********** 12.3 Emergency Page Text **********
+      $wp_customize->add_setting('ecommerce_page_text', array(
+        'default' => 'Emergency Page Text: Edit this in the customizer.',
+        'type'    => 'theme_mod'
+      ));
+      $wp_customize->add_control('ecommerce_page_text', array(
+        'type'     => 'textarea',
+        'label'    => __('Emergency Page Text', 'peterwebdev'),
+        'section'  => 'ecommerce_page',
+        'settings' => 'ecommerce_page_text',
         'priority' => 2
       ));
   // ************************************************************************
