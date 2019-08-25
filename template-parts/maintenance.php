@@ -84,7 +84,9 @@
         <span>Monthly Maintenance Report</span>
       </div>
       <div class="col-sm-12 text-center">
-        <button class="btn btn-primary">Contact Us</button>
+        <button type="button" onclick="window.location.href = './#contact';" class="btn btn-primary">
+          Contact Us
+        </button>
       </div>
     </div>
   </div>
