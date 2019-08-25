@@ -8,7 +8,7 @@ Template Name: Maintenance Page
 	<style>
 		#headerSection .container-fluid {
 			background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-				url(<?= get_theme_mod('maintenance_page_header_image', get_bloginfo('template_url').'/assets/imgs/headers/servers.jpg') ?>) repeat 0 0;
+				url(<?= get_theme_mod('maintenance_page_header_image', get_bloginfo('template_url').'/assets/imgs/headers/maintenance.jpg') ?>) repeat 0 0;
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -25,7 +25,7 @@ Template Name: Maintenance Page
 								<span id="headerTopText" class="h1 text-uppercase">
                   <?= get_theme_mod('maintenance_page_header_title', 'Web Maintenance'); ?>
 								</span>
-								<p class="pt-2"><?= get_theme_mod('maintenance_page_message', 'Edit the "Maintenance Page Header Text" in the customizer.'); ?></p>
+								<p class="pt-2"><?= get_theme_mod('maintenance_page_message', 'Do yourself and your business a favor by allowing us to stay on top of your website. This will repay you with simple ease of mind.'); ?></p>
 								<br />
 								<button type="button" onclick="window.location.href = './#contact';" class="btn btn-primary mt-2 header-button ml-0">
                   Contact Us

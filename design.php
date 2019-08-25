@@ -8,7 +8,7 @@ Template Name: Design Page
 	<style>
 		#headerSection .container-fluid {
 			background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-				url(<?= get_theme_mod('design_page_header_image', get_bloginfo('template_url').'/assets/imgs/headers/servers.jpg') ?>) repeat 0 0;
+				url(<?= get_theme_mod('design_page_header_image', get_bloginfo('template_url').'/assets/imgs/headers/design.jpg') ?>) repeat 0 0;
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
