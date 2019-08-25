@@ -12,7 +12,7 @@ Template Name: Front-End
 				<div class="col mx-auto my-auto pt-5" id="headerCol">
 					<img src="<?= get_bloginfo('template_url').'/assets/imgs/PWD.png';?>" alt="Peter Web Development Logo" id="headerPWDlogo" />
 					<br />
-					<span id="headerTopText" class="h1">
+					<span id="headerTopText" class="h1" style="color: white !important;">
 							<p class="mb-3">We don't just build websites....</p>
 							<span class="text-uppercase" id="headerTopInnerText"
 								>We

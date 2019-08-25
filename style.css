@@ -157,31 +157,9 @@ body {
 #headerSection .post_header_meta {
   color: white !important;
 }
-
 #headerSection .container-fluid {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(assets/imgs/headers/headerbg-min.jpg) repeat 0 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-#headerSection .container-fluid.about {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(assets/imgs/headers/about-bg.jpg) repeat 0 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-#headerSection .container-fluid.contact {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(assets/imgs/headers/contact.jpg) repeat 0 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-#headerSection .container-fluid.web-hosting {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(assets/imgs/headers/servers.jpg) repeat 0 0;
+    url(assets/imgs/headers/headerbg.jpg) repeat 0 0;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
