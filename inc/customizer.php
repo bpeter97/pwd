@@ -39,11 +39,15 @@
 *   7. Design
 *     7.1 design_header_image
 *     7.2 design_header_image
-*     7.3 design_header_text
+*     7.3 design_page_message
 *   8. Maintenance
-*     7.1 maintenance_header_image
-*     7.2 maintenance_header_image
-*     7.3 maintenance_header_text
+*     8.1 maintenance_header_image
+*     8.2 maintenance_header_image
+*     8.3 maintenance_page_message
+*   9. SEO
+*     9.1 seo_header_image
+*     9.2 seo_header_image
+*     9.3 seo_page_message
 */
 
 function pdw_customize_register( $wp_customize ) {
@@ -413,14 +417,14 @@ function pdw_customize_register( $wp_customize ) {
 
   // ********** 7. Design Page **********
     $wp_customize->add_section('design_page', array(
-      'title'       => __('design Page', 'peterwebdev'),
+      'title'       => __('Design Page', 'peterwebdev'),
       'description' => __('Options for the Design Page', 'peterwebdev'),
       'priority'    => 117
     ));
 
     // ********** 7.1 Design Page Header Image **********
       $wp_customize->add_setting('design_page_header_image', array(
-        'default' => get_bloginfo('template_directory').'/assets/imgs/headers/servers.jpg',
+        'default' => get_bloginfo('template_directory').'/assets/imgs/headers/design.jpg',
         'type'    => 'theme_mod'
       ));
       $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'design_page_header_image', array(
@@ -453,7 +457,7 @@ function pdw_customize_register( $wp_customize ) {
 
     // ********** 8.1 Maintenance Page Header Image **********
       $wp_customize->add_setting('maintenance_page_header_image', array(
-        'default' => get_bloginfo('template_directory').'/assets/imgs/headers/servers.jpg',
+        'default' => get_bloginfo('template_directory').'/assets/imgs/headers/maintenance.jpg',
         'type'    => 'theme_mod'
       ));
       $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'maintenance_page_header_image', array(
@@ -486,6 +490,52 @@ function pdw_customize_register( $wp_customize ) {
         'label'    => __('Maintenance Statement Message', 'peterwebdev'),
         'section'  => 'maintenance_page',
         'settings' => 'maintenance_statement_message',
+        'priority' => 2
+      ));
+  // ************************************************************************
+
+  // ********** 9. SEO Page **********
+    $wp_customize->add_section('seo_page', array(
+      'title'       => __('SEO Page', 'peterwebdev'),
+      'description' => __('Options for the SEO Page', 'peterwebdev'),
+      'priority'    => 119
+    ));
+
+    // ********** 9.1 SEO Page Header Image **********
+      $wp_customize->add_setting('seo_page_header_image', array(
+        'default' => get_bloginfo('template_directory').'/assets/imgs/headers/seo.jpg',
+        'type'    => 'theme_mod'
+      ));
+      $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'seo_page_header_image', array(
+        'label'    => __('Header Image', 'peterwebdev'),
+        'section'  => 'seo_page',
+        'settings' => 'seo_page_header_image',
+        'priority' => 1
+      )));
+
+    // ********** 9.2 SEO Page Text **********
+      $wp_customize->add_setting('seo_page_text', array(
+        'default' => 'SEO Page Text: Edit this in the customizer.',
+        'type'    => 'theme_mod'
+      ));
+      $wp_customize->add_control('seo_page_text', array(
+        'type'     => 'textarea',
+        'label'    => __('SEO Page Text', 'peterwebdev'),
+        'section'  => 'seo_page',
+        'settings' => 'seo_page_text',
+        'priority' => 2
+      ));
+
+    // ********** 9.3 SEO Page Text **********
+      $wp_customize->add_setting('seo_statement_message', array(
+        'default' => 'SEO Statement Message: Edit this in the customizer.',
+        'type'    => 'theme_mod'
+      ));
+      $wp_customize->add_control('seo_statement_message', array(
+        'type'     => 'textarea',
+        'label'    => __('SEO Statement Message', 'peterwebdev'),
+        'section'  => 'seo_page',
+        'settings' => 'seo_statement_message',
         'priority' => 2
       ));
   // ************************************************************************
