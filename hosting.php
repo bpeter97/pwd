@@ -23,9 +23,9 @@ Template Name: Hosting Page
 						<div class="row">
 							<div class="col-12 text-center">
 								<span id="headerTopText" class="h1 text-uppercase">
-                  <?= get_theme_mod('hosting_page_header_title', 'Hosting'); ?>
+                  <?= get_theme_mod('hosting_page_header_title', 'Web Hosting'); ?>
 								</span>
-								<p class="pt-2"><?= get_theme_mod('hosting_page_message', 'Edit the "Hosting Page Header Text" in the customizer.'); ?></p>
+								<p class="pt-2"><?= get_theme_mod('hosting_page_text', 'Whether you are looking to host a personal website or a business website, we can provide the solution you are looking for! Reliable and secure, if you have any issues there is always a support system set up to solve your problems.'); ?></p>
 								<br />
 								<button type="button" onclick="window.location.href = './#contact';" class="btn btn-primary mt-2 header-button ml-0">
                   Contact Us
