@@ -552,6 +552,7 @@ body {
   border-radius: 50%;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  padding-right: 0px;
 }
 #services .single-service h4 {
   font-size: 20px;
