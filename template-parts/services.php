@@ -1,14 +1,14 @@
 <?php 
 
 $home = home_url('/');
-$hosting = $home . 'hosting/';
-$design = $home . 'design/';
-$maintenance = $home . 'maintenance/';
-$seo = $home . 'seo/';
+$hosting = $home . 'web-hosting/';
+$design = $home . 'web-design/';
+$maintenance = $home . 'web-maintenance/';
+$seo = $home . 'search-engine-optimization/';
 $content_management = $home . 'content-management/';
-$custom = $home . 'custom/';
-$ecommerce = $home . 'ecommerce/';
-$emergency = $home . 'emergency/';
+$custom = $home . 'custom-web-development/';
+$ecommerce = $home . 'e-commerce-web-development/';
+$emergency = $home . 'emergency-development/';
 
 ?>
 

@@ -1,3 +1,17 @@
+<?php
+
+$home = home_url('/');
+$hosting = $home . 'web-hosting/';
+$design = $home . 'web-design/';
+$maintenance = $home . 'web-maintenance/';
+$seo = $home . 'search-engine-optimization/';
+$content_management = $home . 'content-management/';
+$custom = $home . 'custom-web-development/';
+$ecommerce = $home . 'e-commerce-web-development/';
+$emergency = $home . 'emergency-development/';
+
+?>
+
 <section id="copyright">
 		<div class="container pt-5">
 			<div class="row" id="footerRow">
@@ -32,14 +46,14 @@
 						<div class="card-body">
 							<h5 class="card-title text-center">Services</h5>
 							<ul class="list">
-								<li class="list-item"><a href="<?= home_url('/').'hosting/'; ?>">Web Hosting</a></li>
-								<li class="list-item"><a href="<?= home_url('/').'design/'; ?>">Website Design</a></li>
-								<li class="list-item"><a href="<?= home_url('/').'maintenance/'; ?>">Website Maintenance</a></li>
-								<li class="list-item"><a href="<?= home_url('/').'seo/'; ?>">Search Engine Optimization</a></li>
-								<li class="list-item"><a href="<?= home_url('/').'content-management/'; ?>">Content Management</a></li>
-								<li class="list-item"><a href="<?= home_url('/').'custom/'; ?>">Custom Web Development</a></li>
-								<li class="list-item"><a href="<?= home_url('/').'ecommerce/'; ?>">E-Commerce</a></li>
-								<li class="list-item"><a href="<?= home_url('/').'emergency/'; ?>">Emergency Help</a></li>
+								<li class="list-item"><a href="<?= $hosting; ?>">Web Hosting</a></li>
+								<li class="list-item"><a href="<?= $design; ?>">Website Design</a></li>
+								<li class="list-item"><a href="<?= $maintenance; ?>">Website Maintenance</a></li>
+								<li class="list-item"><a href="<?= $seo; ?>">Search Engine Optimization</a></li>
+								<li class="list-item"><a href="<?= $content_management; ?>">Content Management</a></li>
+								<li class="list-item"><a href="<?= $custom; ?>">Custom Web Development</a></li>
+								<li class="list-item"><a href="<?= $ecommerce; ?>">E-Commerce</a></li>
+								<li class="list-item"><a href="<?= $emergency; ?>">Emergency Help</a></li>
 							</ul>
 						</div>
 					</div>
