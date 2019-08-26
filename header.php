@@ -82,16 +82,6 @@
 							<i class="fab fa-twitter-square"></i>
 						</a>
 					</li>
-					<li class="nav-icon d-inline">
-						<a href="<?= get_theme_mod('linkedin_link','#'); ?>">
-							<i class="fab fa-linkedin"></i>
-						</a>
-					</li>
-					<li class="nav-icon d-inline">
-						<a href="<?= get_theme_mod('instagram_link','#'); ?>">
-							<i class="fab fa-instagram"></i>
-						</a>
-					</li>
 				</ul>
 		</div>
 	</nav>
