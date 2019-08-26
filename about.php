@@ -25,7 +25,7 @@ Template Name: About Page
 				<div class="col mx-auto my-auto pt-5 about" id="headerCol">
 					<div class="container pt-5 text-left">
 						<div class="row">
-							<div class="col-12 col-lg-6">
+							<div class="col-12">
 								<span id="headerTopText" class="h1 text-uppercase">
                   <?= get_theme_mod('about_page_header_title', 'About'); ?>
 								</span>
@@ -34,11 +34,6 @@ Template Name: About Page
 								<button type="button" onclick="window.location.href = './#contact';" class="btn btn-primary mt-2 header-button ml-0">
                   Contact Us
                 </button>
-							</div>
-							<div class="col-12 col-lg-6 text-center">
-								<div class="embed-responsive embed-responsive-16by9">
-									<iframe class="embed-responsive" src="https://www.youtube.com/embed/<?= get_theme_mod('about_page_youtube_id', 'CCSGelSCPGE'); ?>" allowfullscreen></iframe>
-								</div>
 							</div>
 						</div>
 					</div>
