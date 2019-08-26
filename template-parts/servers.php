@@ -59,8 +59,6 @@
           <li class="list-group-item">
             <p class="my-1">Packages starting at:</p>
             <h4 class="card-title mb-0">$8.99 / Month</h4>
-            <p class="my-0 py-0">or</p>
-            <h5 class="card-title">$100.00 / Year</h5>
           </li>
         </ul>
         <div class="card-footer">
