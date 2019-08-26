@@ -19,7 +19,7 @@
           </li>
         </ul>
         <div class="card-footer">
-          <button class="btn btn-primary" onclick="window.location.href = 'https://peterwebdevelopment.com/billing/cart.php?gid=1'">Learn More</button>
+          <button class="btn btn-primary" onclick="window.location.href = 'https://peterwebdevelopment.com/billing/cart.php?gid=1'">Compare Plans</button>
         </div>
       </div>
     </div>
@@ -41,7 +41,7 @@
           </li>
         </ul>
         <div class="card-footer">
-          <button class="btn btn-primary" onclick="window.location.href = 'https://peterwebdevelopment.com/billing/cart.php?gid=2'">Learn More</button>
+          <button class="btn btn-primary" onclick="window.location.href = 'https://peterwebdevelopment.com/billing/cart.php?gid=2'">Compare Plans</button>
         </div>
       </div>
     </div>
@@ -62,7 +62,7 @@
           </li>
         </ul>
         <div class="card-footer">
-          <button class="btn btn-primary" onclick="window.location.href = 'https://peterwebdevelopment.com/billing/cart.php?gid=4'">Learn More</button>
+          <button class="btn btn-primary" onclick="window.location.href = 'https://peterwebdevelopment.com/billing/cart.php?gid=4'">Compare Plans</button>
         </div>
       </div>
     </div>
