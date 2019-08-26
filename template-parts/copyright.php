@@ -35,8 +35,6 @@ $emergency = $home . 'emergency-development/';
 							<ul class="list">
 								<li class="list-item"><a href="<?= get_theme_mod('facebook_link','#'); ?>">Facebook</a></li>
 								<li class="list-item"><a href="<?= get_theme_mod('twitter_link','#'); ?>">Twitter</a></li>
-								<li class="list-item"><a href="<?= get_theme_mod('linkedin_link','#'); ?>">Linked In</a></li>
-								<li class="list-item"><a href="<?= get_theme_mod('instagram_link','#'); ?>">Instagram</a></li>
 							</ul>
 						</div>
 					</div>
