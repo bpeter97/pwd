@@ -12,11 +12,27 @@ $emergency = $home . 'emergency-development/';
 
 ?>
 
+<style>
+	a.service-link h4,
+	a.service-link p,
+	a.service-link {
+		text-decoration: none;
+		color: black;
+	}
+	a.service-link h4:hover,
+	a.service-link p:hover,
+	a.service-link:hover {
+		text-decoration: none;
+		color: black;
+	}
+</style>
+
 <section class="services pt-100 pb-50" id="services">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4 col-md-6">
 					<!-- Single Service -->
+					<a class="service-link" href="<?= $hosting; ?>">
 					<div class="single-service">
 						<i class="fas fa-server"></i>
 						<h4>Web Hosting</h4>
@@ -25,9 +41,11 @@ $emergency = $home . 'emergency-development/';
 							Learn More
 						</button>
 					</div>
+					</a>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<!-- Single Service -->
+					<a class="service-link" href="<?= $design; ?>">
 					<div class="single-service">
 						<i class="fa fa-laptop"></i>
 						<h4>Web Design </h4>
@@ -36,9 +54,11 @@ $emergency = $home . 'emergency-development/';
 							Learn More
 						</button>
 					</div>
+					</a>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<!-- Single Service -->
+					<a class="service-link" href="<?= $design; ?>">
 					<div class="single-service">
 						<i class="fa fa-mobile"></i>
 						<h4>Responsive Design</h4>
@@ -47,9 +67,11 @@ $emergency = $home . 'emergency-development/';
 							Learn More
 						</button>
 					</div>
+					</a>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<!-- Single Service -->
+					<a class="service-link" href="<?= $seo; ?>">
 					<div class="single-service">
 						<i class="fas fa-search"></i>
 						<h4>Search Engine Optimization</h4>
@@ -58,9 +80,11 @@ $emergency = $home . 'emergency-development/';
 							Learn More
 						</button>
 					</div>
+					</a>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<!-- Single Service -->
+					<a class="service-link" href="<?= $content_management; ?>">
 					<div class="single-service">
 						<i class="fas fa-edit"></i>
 						<h4>Content Management</h4>
@@ -69,20 +93,24 @@ $emergency = $home . 'emergency-development/';
 							Learn More
 						</button>
 					</div>
+					</a>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<!-- Single Service -->
+					<a class="service-link" href="<?= $ecommerce; ?>">
 					<div class="single-service">
 						<i class="fas fa-shopping-cart"></i>
 						<h4>E-Commerce</h4>
 						<p>Looking to sell products online? We can help you do that. E-commerce has become a successful way for businesses to reach their customers in a much easier manner. Using WooComerce, we can get you set up and running quickly!</p>
 						<button type="button" onclick="window.location.href = '<?= $ecommerce ?>'" class="btn btn-primary mt-3">
-								Learn More
-							</button>
+							Learn More
+						</button>
 					</div>
+					</a>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<!-- Single Service -->
+					<a class="service-link" href="<?= $custom; ?>">
 					<div class="single-service">
 						<i class="fas fa-code"></i>
 						<h4>Custom Development</h4>
@@ -91,9 +119,11 @@ $emergency = $home . 'emergency-development/';
 							Learn More
 						</button>
 					</div>
+					</a>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<!-- Single Service -->
+					<a class="service-link" href="<?= $maintenance; ?>">
 					<div class="single-service">
 						<i class="fas fa-tools"></i>
 						<h4>Web Maintenance</h4>
@@ -102,9 +132,11 @@ $emergency = $home . 'emergency-development/';
 							Learn More
 						</button>
 					</div>
+					</a>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<!-- Single Service -->
+					<a class="service-link" href="<?= $emergency; ?>">
 					<div class="single-service">
 						<i class="fas fa-exclamation-triangle"></i>
 						<h4>Emergency Services</h4>
@@ -113,6 +145,7 @@ $emergency = $home . 'emergency-development/';
 							Learn More
 						</button>
 					</div>
+					</a>
 				</div>
 			</div>
 		</div>

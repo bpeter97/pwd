@@ -63,7 +63,7 @@ $emergency = $home . 'emergency-development/';
 							<ul class="list">
 								<!-- <li class="list-item">Some PO Box?</li> -->
 								<li class="list-item">Visalia, C.A., U.S.A.</li>
-								<li class="list-item">Phone: 555-555-5555</li>
+								<!-- <li class="list-item">Phone: 555-555-5555</li> -->
 								<li class="list-item"><a href="mailto:admin@peterwebdevelopment.com">Email Us</a></li>
 							</ul>
 						</div>
